@@ -1,0 +1,218 @@
+/* General page styling */
+body{
+  font-family: Arial, sans-serif;
+  background-color:#f7e6ea;
+  color:#5a3a3a;
+  margin:0;
+  line-height:1.6;
+}
+
+/* Header navigation */
+header{
+  position:sticky;
+  top:0;
+  background-color:#f2d7dc;
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  transition:0.4s;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1100px;
+  margin:auto;
+  width:100%;
+}
+
+.brand img{
+  max-height:100px;
+  display:block;
+}
+
+nav a{
+  text-decoration:none;
+  color:#5a3a3a;
+  margin-left:25px;
+  font-size:16px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  opacity:0.7;
+}
+
+nav .book-btn{
+  background-color:#8b5e5e;
+  color:white;
+  padding:6px 16px;
+  border-radius:20px;
+}
+
+/* Main container */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px;
+}
+
+/* Sections */
+section{
+  padding:40px 20px;
+  text-align:center;
+}
+
+/* Hero section */
+.hero{
+  background-image:url("hero.jpg");
+  background-size:cover;
+  background-position:center;
+  padding:120px 20px;
+  color:white;
+  text-align:center;
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+}
+
+.hero h1,
+.hero p,
+.hero a{
+  position:relative;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+/* Services section */
+.services{
+  background-color:#f2d7dc;
+  border-radius:10px;
+}
+
+.services ul{
+  text-align:left;
+  display:inline-block;
+  padding-left:20px;
+  margin-top:10px;
+  margin-bottom:25px;
+}
+
+.services li{
+  margin:6px 0;
+}
+
+/* Headings */
+h1{
+  margin-bottom:10px;
+}
+
+h2{
+  margin-bottom:10px;
+}
+
+h3{
+  margin-top:25px;
+  margin-bottom:5px;
+}
+
+p{
+  max-width:600px;
+  margin:auto;
+}
+
+/* Buttons */
+button{
+  background-color:#8b5e5e;
+  color:white;
+  border:none;
+  padding:14px 28px;
+  font-size:16px;
+  border-radius:25px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background-color:#a97474;
+  transform:scale(1.05);
+}
+
+/* Gallery */
+.gallery img{
+  width:250px;
+  margin:10px;
+  border-radius:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* Booking widget spacing */
+.calendly-inline-widget{
+  margin-top:30px;
+}
+
+/* Footer */
+footer{
+  background-color:#8b5e5e;
+  color:white;
+  padding:20px;
+  text-align:center;
+  margin-top:40px;
+}
+
+/* Mobile responsive */
+@media (max-width:768px){
+
+  header{
+    padding:15px 20px;
+  }
+
+  .container{
+    padding:20px;
+  }
+
+  .nav{
+    flex-direction:column;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  nav a{
+    margin:10px;
+    display:inline-block;
+  }
+
+  .gallery img{
+    width:90%;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+}
