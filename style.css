@@ -67,7 +67,7 @@ section{
 
 /* Hero section */
 .hero{
-  background-image:url("hero.jpg");
+  background-image:url("images/hero.jpeg");
   background-size:cover;
   background-position:center;
   padding:120px 20px;
