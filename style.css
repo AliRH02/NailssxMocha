@@ -174,15 +174,138 @@ button:hover{
   margin-top:30px;
 }
 
-/* Footer */
-footer{
-  background-color:#8b5e5e;
-  color:white;
-  padding:20px;
-  text-align:center;
-  margin-top:40px;
+/* POLICY PAGE */
+.policy-page {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #f7e6ea, #f2d7dc);
+  text-align: center;
 }
 
+/* Title */
+.policy-title {
+  font-size: 34px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px; /* more gap for spacious feel */
+  max-width: 800px;  
+  margin: 0 auto;
+}
+
+@media (max-width:768px){
+  .policy-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
+.policy-card {
+  position: relative;
+  background: #fff9fb;
+  padding: 60px 25px 25px; /* extra top padding to account for floating icon */
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(139,94,94,0.12);
+  border: 1px solid #f0cfd6;
+  transition: all 0.3s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(139,94,94,0.2);
+  border-color: #d6a77a;
+}
+
+/* Floating Icon */
+.icon {
+  background: #f2d7dc;
+  width: 80px;       
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d6a77a;
+  
+  position: absolute; 
+  top: -40px;          
+  left: 50%;          
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px rgba(139, 94, 94, 0.15);
+  z-index: 10;        
+}
+
+.icon img {
+  width: 48px;  /* ensures icon fits nicely */
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Card Text */
+.policy-card h3 {
+  font-size: 16px;
+  color: #8b5e5e;
+  margin-bottom: 20px; /* more spacing after heading */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.policy-card p {
+  font-size: 14px;
+  color: #5a3a3a;
+  line-height: 1.7;        /* more breathing room */
+  margin-bottom: 15px;     /* spacing between paragraphs */
+  max-width: 90%;          /* avoid stretching too wide */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #8b5e5e;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Social Button Container */
+footer .social-btn {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+/* Social Icon styled like policy-card icons */
+footer .social-icon {
+  background: #f7e6ea;        /* light background so #A97474 stands out */
+  width: 80px;                 /* match policy card icon size */
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d6a77a;  /* luxury gold outline */
+  box-shadow: 0 4px 8px rgba(139,94,94,0.15);
+  transition: all 0.3s ease;
+  margin: 0 auto;              /* center horizontally */
+}
+
+footer .social-icon img {
+  width: 48px;                 /* size of your PNG icon inside the circle */
+  height: 48px;
+  object-fit: contain;
+}
+
+footer .social-icon:hover {
+  background: #d6a77a;         /* hover accent gold */
+  transform: scale(1.1);
+}
 /* Mobile responsive */
 @media (max-width:768px){
 
