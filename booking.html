@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nails x Mocha</title>
+  <title>Book Appointment - Nails x Mocha</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,13 +13,14 @@
 <header>
   <div class="nav">
     <div class="brand">
-      <img src="images\Logo.jpg" alt="Nails x Mocha Logo">
+      <img src="images/Logo.jpg" alt="Nails x Mocha Logo">
     </div>
+
     <nav>
       <a href="index.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-<a href="policy.html">Policy</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="policy.html">Policy</a>
       <a href="booking.html" class="book-btn">Book</a>
     </nav>
   </div>
@@ -27,53 +28,23 @@
 
 <main class="container">
 
-<section class="hero">
-<h1>Nails x Mocha</h1>
-<p>Gel X • Builder Gel • Rubber Gel</p>
-<a href="booking.html" class="cta-btn">Book Appointment</a></a>
-</section>
-<section id="services" class="services">
-    <h2>Services & Pricing</h2>
+  <section class="booking">
 
-    <h3>Gel X</h3>
-    <div class="service-list">
-  <p><span>Short (1–2 magnet)</span><span>$35</span></p>
-  <p><span>Medium (3–4 magnet)</span><span>$45</span></p>
-  <p><span>Medium Long (5–7 magnet)</span><span>$55</span></p>
-  <p><span>Long (8–10 magnet)</span><span>$65</span></p>
-</div>
+    <!-- Acuity Scheduling Embed -->
+    <iframe 
+      src="https://app.acuityscheduling.com/schedule.php?owner=38782823&ref=embedded_csp"
+      title="Schedule Appointment"
+      width="100%"
+      height="800"
+      frameborder="0"
+      allow="payment">
+    </iframe>
 
-    <h3>Manicure</h3>
-    <p>Natural Nail or Extension</p>
-
-<div class="service-list">
-  <p><span>Single Polish Color</span><span>$20</span></p>
-  <p><span>Rubber Gel</span><span>$40</span></p>
-  <p><span>Builder Gel</span><span>$40</span></p>
-</div>
-
-    <h3>Pedicure</h3>
-   <div class="service-list">
-  <p><span>Classic</span><span>$35</span></p>
-  <p><span>Deluxe</span><span>$50</span></p>
-</div>
-<div class="service-list">
-  <p><span>Soak Off</span><span>$10</span></p>
-</div>
-  </section>
-
-  <section id="gallery">
-    <h2>Nail Gallery</h2>
-
-    <div class="gallery">
-      <img src="images/nail1.jpeg" alt="Nail design 1">
-      <img src="images/nail2.jpeg" alt="Nail design 2">
-      <img src="images/nail3.jpeg" alt="Nail design 3">
-      <img src="images/nail4.jpeg" alt="Nail design 4">
-    </div>
   </section>
 
 </main>
+
+<script src="https://embed.acuityscheduling.com/js/embed.js"></script>
 
 <footer>
   <p>Follow us on Instagram</p>
@@ -83,6 +54,7 @@
       <img src="images/instagram.png" alt="Instagram icon">
     </div>
   </a>
+
 </footer>
 
 </body>
