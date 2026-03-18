@@ -1,89 +1,375 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================
+   BASE / RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
 
-<head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NailssxMocha</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7e6ea;
+  color: #5a3a3a;
+  margin: 0;
+  line-height: 1.6;
+}
 
-<body>
+/* =========================
+   HEADER / NAV
+========================= */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #f2d7dc;
+border-bottom: 1px solid #d6a77a;  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <img src="images\Logo.jpg" alt="Nails x Mocha Logo">
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-<a href="policy.html">Policy</a>
-      <a href="https://app.acuityscheduling.com/schedule.php?owner=38782823" class="book-btn">Book</a>
-    </nav>
-  </div>
-</header>
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+}
 
-<main class="container">
+.brand img {
+  max-height: 90px;
+  display: block;
+}
 
-<section class="hero">
-<h1>NailssxMocha</h1>
-<p>Gel X • Builder Gel • Rubber Gel</p>
-<a href="https://app.acuityscheduling.com/schedule.php?owner=38782823" class="cta-btn">Book Appointment</a></a>
-</section>
-<section id="services" class="services">
-    <h2>Services & Pricing</h2>
+nav a {
+  text-decoration: none;
+  color: #5a3a3a;
+  margin-left: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-    <h3>Gel X</h3>
-    <div class="service-list">
-  <p><span>Short (1–2 magnet)</span><span>$35</span></p>
-  <p><span>Medium (3–4 magnet)</span><span>$45</span></p>
-  <p><span>Long (5–7 magnet)</span><span>$55</span></p>
-  <p><span>X Long (8–10 magnet)</span><span>$65</span></p>
-</div>
+nav a:hover {
+  opacity: 0.7;
+}
 
-    <h3>Manicure</h3>
-    <p>Natural Nail or Extension</p>
+.book-btn {
+  background-color: #8b5e5e;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
 
-<div class="service-list">
-  <p><span>Classic Gel Color</span><span>$20</span></p>
-  <p><span>Rubber Gel</span><span>$40</span></p>
-  <p><span>Builder Gel</span><span>$40</span></p>
-</div>
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
 
-    <h3>Pedicure</h3>
-   <div class="service-list">
-  <p><span>Classic</span><span>$35</span></p>
-  <p><span>Deluxe</span><span>$50</span></p>
-</div>
-<div class="service-list">
-  <p><span>Soak Off</span><span>$10</span></p>
-</div>
-  </section>
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
 
-  <section id="gallery">
-    <h2>Nail Gallery</h2>
+/* =========================
+   HERO
+========================= */
+.hero {
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  color: white;
+  position: relative;
+}
 
-    <div class="gallery">
-      <img src="images/nail1.jpeg" alt="Nail design 1">
-      <img src="images/nail2.jpeg" alt="Nail design 2">
-      <img src="images/nail3.jpeg" alt="Nail design 3">
-      <img src="images/nail4.jpeg" alt="Nail design 4">
-    </div>
-  </section>
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
 
-</main>
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+}
 
-<footer>
-  <p>Follow us on Instagram</p>
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
 
-  <a href="https://www.instagram.com/nailssxmocha/" target="_blank" rel="noopener noreferrer" class="social-btn">
-    <div class="social-icon">
-      <img src="images/instagram.png" alt="Instagram icon">
-    </div>
-  </a>
-</footer>
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
 
-</body>
-</html>
+/* CTA button (replaces button tag) */
+.cta-btn {
+  display: inline-block;
+  background-color: #8b5e5e;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #a97474;
+  transform: scale(1.05);
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services {
+  background-color: #f2d7dc;
+  border-radius: 10px;
+}
+
+.service-list {
+  margin: 10px 0 25px;
+}
+
+.service-list p {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e8cfd4;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+}
+.service-list p:hover {
+  opacity: 0.7;
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+p {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* Subtle stagger (not too dramatic) */
+.gallery img:nth-child(odd) {
+  transform: translateY(-10px);
+}
+
+.gallery img:nth-child(even) {
+  transform: translateY(10px);
+}
+
+/* Hover = clean luxury lift */
+.gallery img:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+#gallery h2 {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+#gallery {
+  margin-top: 60px;
+}
+
+/* =========================
+   POLICY PAGE 
+========================= */
+.policy-page {
+  padding: 30px 20px;
+  background: #f7e6ea;
+}
+
+.policy-title {
+  font-size: 34px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.policy-title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.policy-card {
+  position: relative;
+  background: #fff9fb;
+  padding: 60px 25px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(139,94,94,0.12);
+  border: 1px solid #f0cfd6;
+  transition: 0.3s;
+}
+
+.policy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(139,94,94,0.2);
+  border-color: #d6a77a;
+}
+
+/* Icon */
+.icon {
+  background: #f2d7dc;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d6a77a;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon img {
+  width: 48px;
+  height: 48px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: #8b5e5e;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+footer .social-btn {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+footer .social-icon,
+footer .social-icon:visited {
+  background: #f7e6ea;        /* default color */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d6a77a;
+  transition: 0.3s;
+  margin: 0 auto;
+utline: none;              
+ -webkit-tap-highlight-color: transparent;
+}
+
+footer .social-icon img {
+  width: 40px;
+}
+
+/* Hover and tap feedback */
+footer .social-icon:hover,
+footer .social-icon:active {
+  background: #d6a77a;        
+  transform: scale(1.1);
+}
+
+footer p {
+  margin-bottom: 1px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+
+.gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery img {
+    height: 200px;
+  }
+}
