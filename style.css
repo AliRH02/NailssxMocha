@@ -179,6 +179,19 @@ p {
   padding: 0 10px;
 }
 
+.gallery-title {
+  font-family: 'MonteCarlo', cursive;
+  font-size: 42px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.gallery-title {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+
 .gallery img {
   width: 100%;
   height: 260px;
@@ -186,9 +199,9 @@ p {
   border-radius: 14px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  cursor: pointer;
 }
 
-/* Subtle stagger (not too dramatic) */
 .gallery img:nth-child(odd) {
   transform: translateY(-10px);
 }
@@ -197,21 +210,37 @@ p {
   transform: translateY(10px);
 }
 
-/* Hover = clean luxury lift */
 .gallery img:hover {
-  transform: translateY(-6px) scale(1.03);
+  transform: translateY(-6px) scale(1.05);
   box-shadow: 0 14px 30px rgba(0,0,0,0.18);
 }
 
-#gallery h2 {
-  text-align: center;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-  margin-bottom: 10px;
+/* =========================
+   ZOOM LIGHTBOX
+========================= */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
 }
 
-#gallery {
-  margin-top: 60px;
+#lightbox img {
+  transform: scale(0.6);
+  transition: transform 0.35s ease;
+  border-radius: 12px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+}
+
+#lightbox.active img {
+  transform: scale(1.7);
 }
 
 /* =========================
@@ -229,7 +258,6 @@ p {
   margin-bottom: 40px;
   letter-spacing: 1px;
 }
-
 
 .policy-title {
   margin-top: 10px;
@@ -346,30 +374,47 @@ footer p {
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
-
   header {
     padding: 15px 20px;
   }
 
+  /* Make nav items wrap neatly */
   .nav {
-    flex-direction: column;
+    flex-direction: column;       /* keep stacking brand + nav */
+    align-items: center;
   }
 
   nav {
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;              /* allows links + button to stay on same line if possible */
+    justify-content: center;      /* centers links horizontally */
+    gap: 10px;                    /* spacing between links and button */
   }
 
-  nav a {
-    margin: 10px;
+  nav a,
+  .book-btn {
+    margin: 5px;                  /* reduce margin for tighter fit */
+    white-space: nowrap;          /* prevents breaking words */
     display: inline-block;
+  }
+
+  .book-btn {
+    padding: 6px 14px;            /* slightly smaller button for mobile */
+    font-size: 14px;
   }
 
   .container {
     padding: 20px;
   }
 
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .gallery img {
     width: 90%;
+    height: 200px;
   }
 
   .hero h1 {
@@ -378,13 +423,5 @@ footer p {
 
   .policy-grid {
     grid-template-columns: 1fr;
-  }
-
-.gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery img {
-    height: 200px;
   }
 }
