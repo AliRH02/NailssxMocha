@@ -78,7 +78,7 @@ section {
    HERO
 ========================= */
 .hero {
-  background-image: url("images/hero.jpeg");
+  background-image: url("images/hero.jpg");
   background-size: cover;
   background-position: center;
   padding: 120px 20px;
