@@ -109,7 +109,6 @@ section {
   margin-bottom: 25px;
 }
 
-/* CTA button (replaces button tag) */
 .cta-btn {
   display: inline-block;
   background-color: #8b5e5e;
@@ -224,6 +223,7 @@ p {
 }
 
 .policy-title {
+  font-family: 'MonteCarlo', cursive;
   font-size: 34px;
   margin-bottom: 50px;
   letter-spacing: 1px;
@@ -265,6 +265,13 @@ p {
   line-height: 1.8;           
   font-size: 16px;
   color: #6b4a4a;
+}
+
+.policy-card h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Icon */
@@ -315,7 +322,7 @@ footer .social-icon:visited {
   border: 1px solid #d6a77a;
   transition: 0.3s;
   margin: 0 auto;
-utline: none;              
+outline: none;              
  -webkit-tap-highlight-color: transparent;
 }
 
@@ -323,7 +330,6 @@ footer .social-icon img {
   width: 40px;
 }
 
-/* Hover and tap feedback */
 footer .social-icon:hover,
 footer .social-icon:active {
   background: #d6a77a;        
