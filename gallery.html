@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | NailssxMocha</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="images/Logo.jpg" alt="Nails x Mocha Logo">
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="policy.html">Policy</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=38782823" class="book-btn">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<section id="gallery">
+  <h2 class="gallery-title">Nail Gallery</h2>
+
+  <div class="gallery">
+    <img src="images/nail1.jpeg" onclick="openImage(this)">
+    <img src="images/nail2.jpeg" onclick="openImage(this)">
+    <img src="images/nail3.jpeg" onclick="openImage(this)">
+    <img src="images/nail4.jpeg" onclick="openImage(this)">
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Follow us on Instagram</p>
+
+  <a href="https://www.instagram.com/nailssxmocha/" target="_blank" class="social-btn">
+    <div class="social-icon">
+      <img src="images/instagram.png">
+    </div>
+  </a>
+</footer>
+
+<script>
+function openImage(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  lightbox.style.display = "flex";
+  lightboxImg.src = img.src;
+
+  setTimeout(() => {
+    lightbox.classList.add("active");
+  }, 10);
+}
+
+function closeImage() {
+  const lightbox = document.getElementById("lightbox");
+
+  lightbox.classList.remove("active");
+
+  setTimeout(() => {
+    lightbox.style.display = "none";
+  }, 300);
+}
+</script>
+
+</body>
+</html>
