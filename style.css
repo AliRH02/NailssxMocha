@@ -474,15 +474,13 @@ section {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    flex-wrap: nowrap;          
-    overflow-x: auto;           
-    white-space: nowrap;                 
+    flex-wrap: wrap;                         
 
   }
 
   nav a,
   .book-btn {
-    margin: 5px;                  
+    margin: 2px;                  
     white-space: nowrap;         
     display: inline-block;
   }
