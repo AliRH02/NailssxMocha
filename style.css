@@ -95,9 +95,14 @@ nav a:active {
 
 section {
   padding: 40px 20px;
+  scroll-margin-top: 100px;
   text-align: center;
+  animation: fadeIn 0.8s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+} 
 /* =========================
    HERO
 ========================= */
@@ -231,6 +236,7 @@ p {
   gap: 20px;
   margin-top: 30px;
   padding: 0 10px;
+
 }
 
 .gallery-title {
@@ -440,9 +446,7 @@ footer p {
   opacity: 0.9;
 }
 
-section {
-  animation: fadeIn 0.8s ease;
-}
+
 
 @keyframes fadeIn {
   from {
