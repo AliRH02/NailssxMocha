@@ -329,8 +329,10 @@ p {
   cursor: pointer;
   color: #f7e6ea;
   background:none;
-  padding:10px;
+  padding:5px;
   transition: 0.3s;
+  border-radius: 50%;
+  z-index: 2100
 }
 
 #lightbox button:hover {
@@ -338,11 +340,11 @@ p {
 }
 
 #lightbox .prev {
-  left: 20px;
+  left: 10px;
 }
 
 #lightbox .next {
-  right: 20px;
+  right: 10px;
 }
 
 .slide-out-left {
