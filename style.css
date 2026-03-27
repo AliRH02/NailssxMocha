@@ -308,14 +308,57 @@ p {
 #lightbox img {
   max-width: 90%;
   max-height: 85%;
+  border-radius:16px;
   transform: scale(0.8);
-  opacity:0'
+  opacity:0;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  touch-action:none;
 }
 
 #lightbox.active img {
   transform: scale(0.9); 
   opacity:1;
+  cursor: grab;
+}
+#lightbox button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  color: #f7e6ea;
+  background:none;
+  padding:10px;
+  transition: 0.3s;
+}
+
+#lightbox button:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+#lightbox .prev {
+  left: 20px;
+}
+
+#lightbox .next {
+  right: 20px;
+}
+
+.slide-out-left {
+  transform: translateX(-100%) scale(0.9);
+  opacity: 0;
+}
+
+.slide-out-right {
+  transform: translateX(100%) scale(0.9);
+  opacity: 0;
+}
+
+.slide-in {
+  transform: translateX(0) scale(0.9);
+  opacity: 1;
+  transition: all 0.4s ease;
 }
 
 /* =========================
