@@ -88,19 +88,20 @@
           }
 
           setTimeout(() => {
-            change image AFTER animation starts
-            if (direction === "next") {
-            currentIndex = (currentIndex + 1) % images.length;
-          }
-          else {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-          }
-          img.src = images[currentIndex].src;
-          img.classList.remove("slide-out-left", "slide-out-right");
-          img.classList.add("slide-in");
 
-          resetZoom();
-          }, 200);
+  if (direction === "next") {
+    currentIndex = (currentIndex + 1) % images.length;
+  } else {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+  }
+
+  img.src = images[currentIndex].src;
+
+  img.classList.remove("slide-out-left", "slide-out-right");
+  img.classList.add("slide-in");
+
+  resetZoom();
+}, 200);
         }
 
 function showNext(e) {
