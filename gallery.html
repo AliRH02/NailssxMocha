@@ -58,22 +58,21 @@ let currentIndex = 0;
 
 let startX = 0;
 let startY = 0;
-let endX = 0;
-let endY = 0;
-
-let scale = 1;
-let startDistance = 0;
 
 let isSwiping = false;
 
+const lightbox = document.getElementById("lightbox");
 const track = document.getElementById("lightbox-track");
 const dotsContainer = document.getElementById("dots");
 
+let currentTranslate = 0;
+let prevTranslate = 0;
 function openImage(img) {
   const lightbox = document.getElementById("lightbox");
 
   currentIndex = Array.from(images).indexOf(img);
 
+  // build track
   track.innerHTML = "";
   dotsContainer.innerHTML = "";
 
@@ -93,14 +92,19 @@ function openImage(img) {
 }
 
 function updateSlide() {
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  const slideWidth = lightbox.offsetWidth;
+
+  currentTranslate = -currentIndex * slideWidth;
+  prevTranslate = currentTranslate;
+
+  track.style.transition = "transform 0.4s ease";
+  track.style.transform = `translateX(${currentTranslate}px)`;
 
   const dots = document.querySelectorAll(".dots span");
   dots.forEach((d, i) => {
     d.classList.toggle("active", i === currentIndex);
   });
 }
-
 
 function showNext(e) {
   if (e) e.stopPropagation();
@@ -113,6 +117,7 @@ function showPrev(e) {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   updateSlide();
 }
+
 function closeImage() {
   const lightbox = document.getElementById("lightbox");
   lightbox.classList.remove("active");
@@ -125,6 +130,8 @@ function closeImage() {
 
 document.getElementById("lightbox").addEventListener("click", function(e) {
   if (isSwiping) return;
+
+  // if clicking on ANY image → do nothing
   if (e.target.tagName === "IMG") {
     return;
   }
@@ -133,7 +140,6 @@ document.getElementById("lightbox").addEventListener("click", function(e) {
   closeImage();
 });
 
-const lightbox = document.getElementById("lightbox");
 
 
 lightbox.addEventListener("touchstart", (e) => {
@@ -148,9 +154,6 @@ lightbox.addEventListener("touchstart", (e) => {
 });
 
 
-let currentTranslate = 0;
-let prevTranslate = 0;
-
 lightbox.addEventListener("touchmove", (e) => {
   const moveX = e.touches[0].clientX;
   const diff = moveX - startX;
@@ -163,12 +166,13 @@ lightbox.addEventListener("touchmove", (e) => {
 lightbox.addEventListener("touchend", () => {
   const movedBy = currentTranslate - prevTranslate;
 
-  if (movedBy < -50) currentIndex++;
-  if (movedBy > 50) currentIndex--;
+  if (movedBy < -60) currentIndex++;
+  if (movedBy > 60) currentIndex--;
 
   currentIndex = Math.max(0, Math.min(currentIndex, images.length - 1));
 
-  prevTranslate = -currentIndex * window.innerWidth;
+  const slideWidth = lightbox.offsetWidth;
+  prevTranslate = -currentIndex * slideWidth;
 
   track.style.transition = "transform 0.4s ease";
   updateSlide();
@@ -189,7 +193,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeImage();
 });
 </script>
-
+  
   <footer>
     <p>Follow us on Instagram</p>
     <a href="https://www.instagram.com/nailssxmocha/" target="_blank" class="social-btn">
