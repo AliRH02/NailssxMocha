@@ -33,21 +33,22 @@
       <h2 class="gallery-title">Nail Gallery</h2>
 
       <div class="gallery">
-        <img src="images/nail1.jpeg" alt="Nail design 1" onclick="openImage(this)">
-        <img src="images/nail2.jpeg" alt="Nail design 2"  onclick="openImage(this)">
-        <img src="images/nail3.jpeg" alt="Nail design 3"  onclick="openImage(this)">
-        <img src="images/nail4.jpeg" alt="Nail design 4" onclick="openImage(this)">
-        <img src="images/nail5.jpeg" alt="Nail design 5" onclick="openImage(this)">
-        <img src="images/nail6.jpeg" alt="Nail design 6"  onclick="openImage(this)">
-        <img src="images/nail7.jpeg" alt="Nail design 7"  onclick="openImage(this)">
-        <img src="images/nail8.jpeg" alt="Nail design 8" onclick="openImage(this)">
+        <img src="images/nails1.png" alt="Nail design 1" onclick="openImage(this)">
+        <img src="images/nails2.png" alt="Nail design 2"  onclick="openImage(this)">
+        <img src="images/nails3.png" alt="Nail design 3"  onclick="openImage(this)">
+        <img src="images/nails4.png" alt="Nail design 4" onclick="openImage(this)">
+        <img src="images/nails5.png" alt="Nail design 5" onclick="openImage(this)">
+        <img src="images/nails6.png" alt="Nail design 6"  onclick="openImage(this)">
+        <img src="images/nails7.png" alt="Nail design 7"  onclick="openImage(this)">
+        <img src="images/nails8.png" alt="Nail design 8" onclick="openImage(this)">
       </div>
 
       <div id="lightbox">
-  	<button class="prev" onclick="showPrev(event)">❮</button>
-	<img id="lightbox-img">
-	<button class="next" onclick="showNext(event)">❯</button>
-	</div>
+         <button class="prev" onclick="showPrev(event)">❮</button>
+         <div class="lightbox-track" id="lightbox-track"></div>
+         <button class="next" onclick="showNext(event)">❯</button>
+         <div class="dots" id="dots"></div>
+</div>
     </section>
   </main>
 
@@ -65,60 +66,53 @@ let startDistance = 0;
 
 let isSwiping = false;
 
+const track = document.getElementById("lightbox-track");
+const dotsContainer = document.getElementById("dots");
 
 function openImage(img) {
   const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
 
   currentIndex = Array.from(images).indexOf(img);
-  lightboxImg.src = images[currentIndex].src;
+
+  track.innerHTML = "";
+  dotsContainer.innerHTML = "";
+
+  images.forEach((image, i) => {
+    const clone = image.cloneNode();
+    track.appendChild(clone);
+
+    const dot = document.createElement("span");
+    if (i === currentIndex) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+  });
+
+  updateSlide();
+
   lightbox.style.display = "flex";
-
-  setTimeout(() => {
-    lightbox.classList.add("active");
-    lightboxImg.classList.add("slide-in");
-  }, 10);
-
-  resetZoom();
+  setTimeout(() => lightbox.classList.add("active"), 10);
 }
 
+function updateSlide() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-function changeImage(direction) {
-  const img = document.getElementById("lightbox-img");
-  img.classList.remove("slide-in");
-
-  if (direction === "next") {
-    img.classList.add("slide-out-left");
-  } else {
-    img.classList.add("slide-out-right");
-  }
-
-  setTimeout(() => {
-    if (direction === "next") {
-      currentIndex = (currentIndex + 1) % images.length;
-    } else {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-    }
-
-    img.src = images[currentIndex].src;
-
-    img.classList.remove("slide-out-left", "slide-out-right");
-    img.classList.add("slide-in");
-
-    resetZoom();
-  }, 200);
+  const dots = document.querySelectorAll(".dots span");
+  dots.forEach((d, i) => {
+    d.classList.toggle("active", i === currentIndex);
+  });
 }
+
 
 function showNext(e) {
   if (e) e.stopPropagation();
-  changeImage("next");
+  currentIndex = (currentIndex + 1) % images.length;
+  updateSlide();
 }
 
 function showPrev(e) {
   if (e) e.stopPropagation();
-  changeImage("prev");
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateSlide();
 }
-
 function closeImage() {
   const lightbox = document.getElementById("lightbox");
   lightbox.classList.remove("active");
@@ -131,18 +125,12 @@ function closeImage() {
 
 document.getElementById("lightbox").addEventListener("click", function(e) {
   if (isSwiping) return;
-
-  const screenWidth = window.innerWidth;
-
-  if (e.target.id === "lightbox-img") {
-    if (e.clientX > screenWidth / 2) {
-      showNext();
-    } else {
-      showPrev();
-    }
-  } else {
-    closeImage();
+  if (e.target.tagName === "IMG") {
+    return;
   }
+
+  // otherwise close
+  closeImage();
 });
 
 const lightbox = document.getElementById("lightbox");
@@ -160,48 +148,30 @@ lightbox.addEventListener("touchstart", (e) => {
 });
 
 
+let currentTranslate = 0;
+let prevTranslate = 0;
+
 lightbox.addEventListener("touchmove", (e) => {
-
   const moveX = e.touches[0].clientX;
-  const moveY = e.touches[0].clientY;
+  const diff = moveX - startX;
 
-  if (Math.abs(moveX - startX) > 10 || Math.abs(moveY - startY) > 10) {
-    isSwiping = true;
-  }
+  currentTranslate = prevTranslate + diff;
+  track.style.transition = "none";
+  track.style.transform = `translateX(${currentTranslate}px)`;
+});
 
-  if (e.touches.length === 1) {
-    e.preventDefault();
-  }
+lightbox.addEventListener("touchend", () => {
+  const movedBy = currentTranslate - prevTranslate;
 
-  if (e.touches.length === 2) {
-    const newDistance = getDistance(e.touches);
-    scale = newDistance / startDistance;
+  if (movedBy < -50) currentIndex++;
+  if (movedBy > 50) currentIndex--;
 
-    scale = Math.min(Math.max(scale, 1), 3);
-    document.getElementById("lightbox-img").style.transform = `scale(${scale})`;
-  }
-}, { passive: false });
+  currentIndex = Math.max(0, Math.min(currentIndex, images.length - 1));
 
+  prevTranslate = -currentIndex * window.innerWidth;
 
-lightbox.addEventListener("touchend", (e) => {
-  endX = e.changedTouches[0].clientX;
-  endY = e.changedTouches[0].clientY;
-
-  const diffX = startX - endX;
-  const diffY = startY - endY;
-
-if (scale > 1) {
-    resetZoom();
-    return; 
-  }
-
-  if (Math.abs(diffX) > 50 && Math.abs(diffY) < 50) {
-    if (diffX > 0) {
-      showNext();
-    } else {
-      showPrev();
-    }
-  }
+  track.style.transition = "transform 0.4s ease";
+  updateSlide();
 });
 
 
@@ -212,11 +182,6 @@ function getDistance(touches) {
   );
 }
 
-function resetZoom() {
-  scale = 1;
-  const img = document.getElementById("lightbox-img");
-  img.style.transform = "scale(1)";
-}
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") showNext();
