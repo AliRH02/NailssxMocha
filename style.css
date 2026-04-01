@@ -337,7 +337,7 @@ p {
 }
 
 #lightbox button:hover {
-  transform: translateY(-50%) scale(1.2);
+  transform: translateY(-10%);
 }
 
 #lightbox .prev {
