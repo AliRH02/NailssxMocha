@@ -351,8 +351,10 @@ p {
 #lightbox .close-btn {
   top: 20px;
   right: 20px;
+  left: auto;
   transform: none; 
-  font-size: 2rem;
+  position: absolute;
+  color:#f7e6ea
 }
 
 .slide-out-left {
