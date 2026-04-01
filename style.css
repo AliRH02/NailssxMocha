@@ -349,12 +349,12 @@ p {
 }
 
 #lightbox .close-btn {
+  color:#f7e6ea;
   top: 20px;
   right: 20px;
   left: auto;
   transform: none; 
   position: absolute;
-  color:#f7e6ea;
 }
 
 .slide-out-left {
@@ -397,6 +397,7 @@ p {
 .dots span {
   width: 8px;
   height: 8px;
+  color:#8b7d73;
   background: #8b7d73;
   border-radius: 50%;
   transition: 0.3s;
@@ -406,6 +407,7 @@ p {
 .dots span.active {
   width: 10px;           
   height: 10px;
+  color:#f7e6ea;
   background: #f7e6ea;   
   position: relative;
   transform: rotate(-45deg);  
