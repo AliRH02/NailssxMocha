@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NailssxMocha</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="images/Logo.jpg" alt="Nails x Mocha Logo">
+    </div>
+    <nav>
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="gallery.html" data-i18n="navGallery">Gallery</a>
+      <a href="policy.html" data-i18n="navPolicy">Policy</a>
+      <a href="https://nailssxmocha-booking.as.me/" class="book-btn" data-i18n="navBook">Book</a>
+    </nav>
+    <div class="lang-switcher">
+      <button id="lang-en">EN</button>
+      <button id="lang-es">ES</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<section id="home" class="hero">
+<h1 data-i18n="homeTitle">NailssxMocha</h1>
+<p data-i18n="homeSubtitle">Gel X • Builder Gel • Rubber Gel</p>
+<a href="https://nailssxmocha-booking.as.me/" class="cta-btn" data-i18n="bookBtn">Book Appointment</a>
+</section>
+
+<section id="services" class="services">
+<h2 class="service-title" data-i18n="servicesTitle">Services & Pricing</h2>
+
+<h3 data-i18n="serviceGelX">Gel X</h3>
+<div class="service-list">
+<p><span data-i18n="short">Short (1–2 magnet)</span><span>$40</span></p>
+<p><span data-i18n="medium">Medium (3–4 magnet)</span><span>$50</span></p>
+<p><span data-i18n="long">Long (5–7 magnet)</span><span>$60</span></p>
+<p><span data-i18n="xlong">X Long (8–10 magnet)</span><span>$70</span></p>
+</div>
+
+<h3 data-i18n="manicure">Manicure</h3>
+<p data-i18n="natural">Natural Nail or Extension</p>
+<div class="service-list">
+<p><span data-i18n="classicGel">Classic Gel Color</span><span>$30</span></p>
+<p><span data-i18n="rubberGel">Rubber Gel</span><span>$50</span></p>
+<p><span data-i18n="builderGel">Builder Gel</span><span>$50</span></p>
+</div>
+
+<h3 data-i18n="pedicure">Pedicure</h3>
+<div class="service-list">
+<p><span data-i18n="classic">Classic</span><span>$35</span></p>
+<p><span data-i18n="deluxe">Deluxe</span><span>$50</span></p>
+</div>
+<div class="service-list">
+<p><span data-i18n="soakOff">Soak Off</span><span>$10</span></p>
+<p><span data-i18n="foreignSoak">Foreign Soak Off</span><span>$15</span></p>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="gallery-title" data-i18n="galleryTitle">Featured Nails</h2>
+<div class="gallery">
+  <img src="images/nail1.jpeg" alt="Nail design 1">
+  <img src="images/nail8.jpeg" alt="Nail design 8">
+  <img src="images/nail3.jpeg" alt="Nail design 3">
+  <img src="images/nail4.jpeg" alt="Nail design 4">
+</div>
+<a href="gallery.html" class="cta-btn view-gallery-btn" data-i18n="viewGallery">View Full Gallery</a>
+</section>
+
+</main>
+
+<footer>
+<p data-i18n="instagram">Follow us on Instagram</p>
+<a href="https://www.instagram.com/nailssxmocha/" target="_blank" rel="noopener noreferrer" class="social-btn">
+  <div class="social-icon">
+    <img src="images/instagram.png" alt="Instagram icon">
+  </div>
+</a>
+</footer>
+
+<script>
+document.querySelectorAll('.social-icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.style.background = '#f7e6ea';
+    icon.style.transform = 'scale(1)';
+  });
+});
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+let isInitialLoad = true;
+
+window.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash;
+  navLinks.forEach(l => l.classList.remove("active"));
+  if (hash) {
+    const targetLink = document.querySelector(`nav a[href="${hash}"]`);
+    if (targetLink) targetLink.classList.add("active");
+  } else {
+    const homeLink = document.querySelector('nav a[href="#home"]');
+    if (homeLink) homeLink.classList.add("active");
+  }
+  setTimeout(() => { isInitialLoad = false; }, 500);
+});
+
+let isClickScrolling = false;
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+    if (href === "#home" && (window.location.hash === "" || window.location.hash === "#home")) {
+      e.preventDefault();
+      return;
+    }
+    if (href.startsWith("#")) {
+      isClickScrolling = true;
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+      setTimeout(() => { isClickScrolling = false; }, 600);
+    }
+  });
+});
+
+window.addEventListener("scroll", () => {
+  if (isClickScrolling || isInitialLoad) return;
+  if (window.scrollY < 100) {
+    navLinks.forEach(link => link.classList.remove("active"));
+    document.querySelector('nav a[href="#home"]').classList.add("active");
+    return;
+  }
+  let current = "";
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= 185 && rect.bottom >= 180) current = section.id;
+  });
+  navLinks.forEach(link => link.classList.remove("active"));
+  if (current === "home" || current === "gallery") {
+    document.querySelector('nav a[href="#home"]').classList.add("active");
+  } else if (current === "services") {
+    document.querySelector('nav a[href="#services"]').classList.add("active");
+  }
+});
+
+// --- LANGUAGE SWITCHER ---
+let translations = {};
+let currentLang = "en";
+
+fetch("translations.json")
+  .then(res => res.json())
+  .then(data => {
+    translations = data;
+    const userLang = navigator.language || navigator.userLanguage;
+    currentLang = userLang.startsWith('es') ? 'es' : 'en';
+    setLanguage(currentLang);
+  });
+
+function setLanguage(lang) {
+  currentLang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang] && translations[lang][key]){
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+document.getElementById("lang-en").addEventListener("click", () => setLanguage("en"));
+document.getElementById("lang-es").addEventListener("click", () => setLanguage("es"));
+</script>
+
+</body>
+</html>
