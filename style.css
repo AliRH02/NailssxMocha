@@ -354,7 +354,7 @@ p {
   left: auto;
   transform: none; 
   position: absolute;
-  color:#f7e6ea
+  color:#f7e6ea;
 }
 
 .slide-out-left {
@@ -397,14 +397,39 @@ p {
 .dots span {
   width: 8px;
   height: 8px;
-  background: rgba(255,255,255,0.5);
+  background: #8b7d73;
   border-radius: 50%;
   transition: 0.3s;
 }
 
+
 .dots span.active {
-  background: white;
-  transform: scale(1.2);
+  width: 10px;           
+  height: 10px;
+  background: #f7e6ea;   
+  position: relative;
+  transform: rotate(-45deg);  
+  border-radius: 2px;
+}
+
+.dots span.active::before,
+.dots span.active::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f7e6ea;  
+  border-radius: 50%;
+}
+
+.dots span.active::before {
+  top: -6px;
+  left: 0;
+}
+
+.dots span.active::after {
+  left: 6px;
+  top: 0;
 }
 
 /* =========================
