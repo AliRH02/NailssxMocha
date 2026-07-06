@@ -7,8 +7,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7e6ea;
-  color: #5a3a3a;
+  background-color: #FFFCCF;
+  color: #2D2D2D;
   margin: 0;
   line-height: 1.6;
 }
@@ -19,8 +19,8 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: #f2d7dc;
-  border-bottom: 1px solid #d6a77a;  
+  background-color: #FFFEBF;
+  border-bottom: 1px solid #FC98C9;  
   padding: 15px 40px;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ header {
 .header p {
   font-family: 'Lora', serif;
   font-size: 15px;       
-  color: #6b4a4a;
+  color: #2D2D2D;
   line-height: 1.8;
   margin-bottom: 18px;
 }
@@ -51,7 +51,7 @@ header {
 
 nav a {
   text-decoration: none;
-  color: #5a3a3a;
+  color: #2D2D2D;
   margin-left: 25px;
   font-size: 16px;
   font-weight: bold;
@@ -63,12 +63,12 @@ padding: 6px 10px;
 }
 
 nav a:hover {
-  background: rgba(139, 94, 94, 0.1);
+  background: rgba(252, 152, 201, 0.1);
 }
 
 nav a.active {
   opacity: 0.8;
-  background: rgba(139,94,94,0.2);
+  background: rgba(237,192,214,0.2);
   pointer-events: none;
   cursor: default;
 }
@@ -78,8 +78,8 @@ nav a:active {
 }
 
 .book-btn {
-  background-color: #8b5e5e;
-  color: white;
+  background-color: #fc98c9;
+  color: #2D2D2D;
   padding: 8px 18px;
   border-radius: 20px;
 }
@@ -140,8 +140,8 @@ html {
 
 .cta-btn {
   display: inline-block;
-  background-color: #8b5e5e;
-  color: white;
+  background-color: #FC98C9;
+  color: #2D2D2D;
   padding: 14px 28px;
   border-radius: 25px;
   text-decoration: none;
@@ -149,7 +149,7 @@ html {
 }
 
 .cta-btn:hover {
-  background-color: #a97474;
+  background-color: #edc0d6;
   transform: scale(1.05);
 }
 
@@ -157,7 +157,7 @@ html {
    SERVICES
 ========================= */
 .services {
-  background-color: #f2d7dc;
+  background-color: #FEE4E4;
   border-radius: 10px;
 }
 .service-title {
@@ -173,14 +173,14 @@ html {
   font-size: 25px;     
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #5a3a3a;
+  color: #2D2D2D;
   letter-spacing: 0.5px;
 }
 
 .services p {
   font-family: 'Lora', serif;
   font-size: 15px;       
-  color: #6b4a4a;
+  color: #2D2D2D;
   line-height: 1.8;
   margin-bottom: 18px;
 }
@@ -328,7 +328,7 @@ p {
   font-size: 2rem;
   border: none;
   cursor: pointer;
-  color: #f7e6ea;
+  color: #FFFEBF;
   background:none;
   padding:5px;
   transition: 0.3s;
@@ -349,7 +349,7 @@ p {
 }
 
 #lightbox .close-btn {
-  color:#f7e6ea;
+  color:#FFFEBF;
   top: 20px;
   right: 20px;
   left: auto;
@@ -397,8 +397,8 @@ p {
 .dots span {
   width: 8px;
   height: 8px;
-  color:#8b7d73;
-  background: #8b7d73;
+  color:#2D2D2D;
+  background: #2D2D2D;
   border-radius: 50%;
   transition: 0.3s;
 }
@@ -407,8 +407,8 @@ p {
 .dots span.active {
   width: 10px;           
   height: 10px;
-  color:#f7e6ea;
-  background: #f7e6ea;   
+  color:#FFFEBF;
+  background: #FFFEBF;   
   position: relative;
   transform: rotate(-45deg);  
   border-radius: 2px;
@@ -420,7 +420,7 @@ p {
   position: absolute;
   width: 10px;
   height: 10px;
-  background: #f7e6ea;  
+  background: #FFFEBF;  
   border-radius: 50%;
 }
 
@@ -439,7 +439,7 @@ p {
 ========================= */
 .policy-page {
   padding: 30px 20px;
-  background: #f7e6ea;
+  background: #FFFCCF;
 }
 
 .policy-title {
@@ -465,7 +465,7 @@ p {
 
 .policy-card {
   position: relative;
-  background: #fff9fb;
+  background: #FEE4E4;
   padding: 40px 25px 25px;
   border-radius: 20px;
   text-align: center;
@@ -478,14 +478,14 @@ p {
 .policy-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(139,94,94,0.2);
-  border-color: #d6a77a;
+  border-color: #fff9fb;
 }
 
 .policy-card p {
   margin: 10px 0;
   line-height: 1.8;           
   font-size: 16px;
-  color: #6b4a4a;
+  color: #2D2D2D;
 }
 
 .policy-card h2 {
@@ -496,14 +496,14 @@ p {
 
 
 .icon {
-  background: #f2d7dc;
+  background: #FFFEBF;
   width: 80px;
   height: 80px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #d6a77a;
+  border: 1px solid #edc0d6;
   position: absolute;
   top: -40px;
   left: 50%;
@@ -519,8 +519,8 @@ p {
    FOOTER
 ========================= */
 footer {
-  background-color: #8b5e5e;
-  color: white;
+  background-color: #FC98C9;
+  color: #2D2D2D;
   padding: 5px 5px;
   text-align: center;
 }
@@ -532,14 +532,14 @@ footer .social-btn {
 
 footer .social-icon,
 footer .social-icon:visited {
-  background: #f7e6ea;        
+  background: #FFFEBF;        
   width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #d6a77a;
+  border: 1px solid #edcod6;
   transition: 0.3s;
   margin: 0 auto;
   outline: none;              
@@ -552,7 +552,7 @@ footer .social-icon img {
 
 footer .social-icon:hover,
 footer .social-icon:active {
-  background: #d6a77a;        
+  background: #fff9fb;        
   transform: scale(1.1);
 }
 
