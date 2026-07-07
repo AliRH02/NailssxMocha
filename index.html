@@ -1,658 +1,230 @@
-/* =========================
-   BASE / RESET
-========================= */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #FFFCCF;
-  color: #2D2D2D;
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* =========================
-   HEADER / NAV
-========================= */
-header {
-  position: sticky;
-  top: 0;
-  background-color: #FFFEBF;
-  border-bottom: 1px solid #FC98C9;  
-  padding: 15px 40px;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-}
-
-.header p {
-  font-family: 'Lora', serif;
-  font-size: 15px;       
-  color: #2D2D2D;
-  line-height: 1.8;
-  margin-bottom: 18px;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  width: 100%;
-}
-
-.brand img {
-  max-height: 90px;
-  display: block;
-}
-
-nav a {
-  text-decoration: none;
-  color: #2D2D2D;
-  margin-left: 25px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
-padding: 6px 10px;
-  border-radius: 10px;
-  -webkit-tap-highlight-color: transparent;
-
-}
-
-nav a:hover {
-  background: rgba(252, 152, 201, 0.1);
-}
-
-nav a.active {
-  opacity: 0.8;
-  background: rgba(237,192,214,0.2);
-  pointer-events: none;
-  cursor: default;
-}
-
-nav a:active {
-  transform: scale(0.95);
-}
-
-.book-btn {
-  background-color: #fc98c9;
-  color: #2D2D2D;
-  padding: 8px 18px;
-  border-radius: 20px;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px;
-}
-
-section {
-  padding: 40px 20px;
-  scroll-margin-top: 100px;
-  text-align: center;
-  animation: fadeIn 0.8s ease;
-}
-
-html {
-  scroll-behavior: smooth;
-} 
-/* =========================
-   HERO
-========================= */
-.hero {
-  background-image: url("images/hero.jpeg");
-  background-size: cover;
-  background-position: center;
-  padding: 120px 20px;
-  color: white;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-}
-
-.hero h1,
-.hero p,
-.hero a {
-  position: relative;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-
-.cta-btn {
-  display: inline-block;
-  background-color: #FC98C9;
-  color: #2D2D2D;
-  padding: 14px 28px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.cta-btn:hover {
-  background-color: #edc0d6;
-  transform: scale(1.05);
-}
-
-/* =========================
-   SERVICES
-========================= */
-.services {
-  background-color: #FEE4E4;
-  border-radius: 10px;
-}
-.service-title {
-  font-family: 'MonteCarlo', cursive;
-  font-size: 42px;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-.services h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;     
-  margin-top: 30px;
-  margin-bottom: 20px;
-  color: #2D2D2D;
-  letter-spacing: 0.5px;
-}
-.services h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;     
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #2D2D2D;
-  letter-spacing: 0.5px;
-}
-
-.services p {
-  font-family: 'Lora', serif;
-  font-size: 15px;       
-  color: #2D2D2D;
-  line-height: 1.8;
-  margin-bottom: 18px;
-}
-
-.service-list {
-  margin: 10px 0 25px;
-}
-
-.service-list p {
-  display: flex;
-  font-family: 'Lora', serif;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #e8cfd4;
-  max-width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
-}
-
-.services p.service-note {
-  font-family: 'Playfair Display', serif;
-  font-size: 13px;
-  color: #FF69B4;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-.services p.service-note::before {
-  content: "✦  ";
-}
-
-.services p.service-note::after {
-  content: "  ✦";
-}
-
-.service-list p:hover {
-  opacity: 0.7;
-}
-
-#services {
-  scroll-margin-top: 140px; 
-}
-
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-h1, h2 {
-  margin-bottom: 10px;
-}
-
-h3 {
-  margin-top: 25px;
-  margin-bottom: 5px;
-}
-
-p {
-  max-width: 600px;
-  margin: auto;
-}
-
-/* =========================
-   GALLERY
-========================= */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-  padding: 0 10px;
-
-}
-
-.gallery-title {
-  font-family: 'MonteCarlo', cursive;
-  font-size: 42px;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-.gallery-title {
-  margin-top: 10px;
-  margin-bottom: 50px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-  cursor: pointer;
-}
-
-.gallery img:nth-child(odd) {
-  transform: translateY(-6px);
-}
-
-.gallery img:nth-child(even) {
-  transform: translateY(6px);
-}
-
-.gallery img:hover {
-  transform: translateY(calc(var(--y-offset, 0px) - 3px)) scale(1.05);
-}
-
-.view-gallery-btn {
-  margin-top: 20px;
-  display: inline-block;
-}
-
-/* =========================
-   ZOOM LIGHTBOX
-========================= */
-#lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  backdrop-filter: blur(3px);
-  opacity: 0;
-  pointer-events: none;
-  transition: background 0.4s ease, opacity 0.4s ease;
-}
-
-#lightbox.active {
-  background: rgba(0,0,0,0.6);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 85%;
-  border-radius:16px;
-  transform: scale(0.8);
-  opacity:0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  touch-action:none;
-}
-
-#lightbox.active img {
-  transform: scale(0.9); 
-  opacity:1;
-  cursor: grab;
-}
-
-#lightbox button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  border: none;
-  cursor: pointer;
-  color: #FFFEBF;
-  background:none;
-  padding:5px;
-  transition: 0.3s;
-  border-radius: 50%;
-  z-index: 2100
-}
-
-#lightbox button:hover {
-  transform: translateY(-10%);
-}
-
-#lightbox .prev {
-  left: 10px;
-}
-
-#lightbox .next {
-  right: 10px;
-}
-
-#lightbox .close-btn {
-  color:#FFFEBF;
-  top: 20px;
-  right: 20px;
-  left: auto;
-  transform: none; 
-  position: absolute;
-}
-
-.slide-out-left {
-  transform: translateX(-100%) scale(0.9);
-  opacity: 0;
-}
-
-.slide-out-right {
-  transform: translateX(100%) scale(0.9);
-  opacity: 0;
-}
-
-.slide-in {
-  transform: translateX(0) scale(0.9);
-  opacity: 1;
-  transition: all 0.4s ease;
-}
-
-.lightbox-track {
-  display: flex;
-  height: 100%;
-  transition: transform 0.4s ease;
-  gap:0;
-  margin:0;
-}
-
-.lightbox-track img {
-  min-width: 100%;
-  object-fit: contain;
-  border-radius: 0px;
-}
-
-.dots {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  gap: 8px;
-}
-
-.dots span {
-  width: 8px;
-  height: 8px;
-  color:#2D2D2D;
-  background: #2D2D2D;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-
-.dots span.active {
-  width: 10px;           
-  height: 10px;
-  color:#FFFEBF;
-  background: #FFFEBF;   
-  position: relative;
-  transform: rotate(-45deg);  
-  border-radius: 2px;
-}
-
-.dots span.active::before,
-.dots span.active::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #FFFEBF;  
-  border-radius: 50%;
-}
-
-.dots span.active::before {
-  top: -6px;
-  left: 0;
-}
-
-.dots span.active::after {
-  left: 6px;
-  top: 0;
-}
-
-/* =========================
-   POLICY PAGE 
-========================= */
-.policy-page {
-  padding: 30px 20px;
-  background: #FFFCCF;
-}
-
-.policy-title {
-  font-family: 'MonteCarlo', cursive;
-  font-size: 42px;
-  margin-top: 10px;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-.policy-title {
-  margin-top: 10px;
-  margin-bottom: 50px;
-}
-
-.policy-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.policy-card {
-  position: relative;
-  background: #FEE4E4;
-  padding: 40px 25px 25px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(139,94,94,0.12);
-  border: 1px solid #f0cfd6;
-  transition: 0.4s ease;
-  font-family: 'Georgia', serif; 
-}
-
-.policy-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(139,94,94,0.2);
-  border-color: #fff9fb;
-}
-
-.policy-card p {
-  margin: 10px 0;
-  line-height: 1.8;           
-  font-size: 16px;
-  color: #2D2D2D;
-}
-
-.policy-card h2 {
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-
-.icon {
-  background: #FFFEBF;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #edc0d6;
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.icon img {
-  width: 48px;
-  height: 48px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background-color: #FC98C9;
-  color: #2D2D2D;
-  padding: 5px 5px;
-  text-align: center;
-}
-
-footer .social-btn {
-  display: inline-block;
-  margin-top: 15px;
-}
-
-footer .social-icon,
-footer .social-icon:visited {
-  background: #FFFEBF;        
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #edcod6;
-  transition: 0.3s;
-  margin: 0 auto;
-  outline: none;              
-  -webkit-tap-highlight-color: transparent;
-}
-
-footer .social-icon img {
-  width: 40px;
-}
-
-footer .social-icon:hover,
-footer .social-icon:active {
-  background: #fff9fb;        
-  transform: scale(1.1);
-}
-
-footer p {
-  margin-bottom: 1px;
-  font-size: 15px;
-  opacity: 0.9;
-}
-
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NailssxMocha</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="images\Logo.jpg" alt="Nails x Mocha Logo">
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#policy">Policy</a>
+      <a href="https://nailssxmocha-booking.as.me/" class="book-btn">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<section id="home" class="hero">
+<h1>NailssxMocha</h1>
+<p>Gel X • Acrygel • Gel Manicure</p>
+<a href="https://nailssxmocha-booking.as.me/" class="cta-btn">Book Appointment</a>
+</section>
+<section id="policy" class="policy">
+<h1 class="policy-title">Policies / Políticas</h1>
+
+    <div class="policy-grid">
+
+      <div class="policy-card">
+        <div class="icon">
+          <img src="images/icons_appointment.png" alt="Appointments icon">
+        </div>
+
+        <h2>Appointments</h2>
+
+        <p>Please arrive on time. A 20-minute grace period is allowed.</p>
+        <p>If you are running late, your session may be shortened or rescheduled.</p>
+        <p>If you need to cancel or reschedule, please give at least 48 hours notice.</p>
+        <p>No guests allowed.</p>
+        <p>Submit your inspiration photos the same day you book your appointment.</p>
+      </div>
+
+      <div class="policy-card">
+        <div class="icon">
+          <img src="images/icons_wallet.png" alt="Payments icon">
+        </div>
+
+        <h2>Deposits</h2>
+
+        <p>A $10 deposit is required to secure your appointment.</p>
+        <p>Deposits are non-refundable. No deposit means no appointment.</p>
+        <p>Payments are due immediately after your appointment.</p>
+        <p>We accept Cash or Card(at an additional fee of $2)</p>
+      </div>
+
+    </div>
+  </section>
+
+
+<section id="services" class="services">
+  <h2 class="service-title">Services & Pricing</h2>
+<h3>Extensions</h3>
+<p class="service-note">Designs Included</p>
+<h4>Nail Extensions</h4>
+<div class="service-list">
+    <p><span>Gen-X</span><span>$10</span></p>
+    <p><span>Acrygel</span><span>$15</span></p>
+
+  </div> 
+
+  <h4>Nail Length</h4>
+
+  <div class="service-list">
+    <p><span>Short (1–2 magnet)</span><span>$40</span></p>
+    <p><span>Medium (3–4 magnet)</span><span>$45</span></p>
+    <p><span>Long (5–7 magnet)</span><span>$55</span></p>
+    <p><span>X Long (8–10 magnet)</span><span>$65</span></p>
+  </div>
+
+<h3>Structure Manicure</h3>
+<p class="service-note">Natural Nail Only</p>
+
+  <div class="service-list">
+    <p><span>Single Polish Color</span><span>$35</span></p>
+    <p><span>Rubber Gel</span><span>$50</span></p>
+    <p><span>Builder Gel</span><span>$60</span></p>  </div>
+
+  <h3>Pedicure</h3>
+
+  <div class="service-list">
+    <p><span>Classic Dry</span><span>$40</span></p>
+    <p><span>Basic</span><span>$45</span></p>
+    <p><span>Deluxe</span><span>$60</span></p>
+  </div>
+</section>
+<section id="gallery">
+  <h2 class="gallery-title">Featured Nails</h2>
+
+  <div class="gallery">
+    <img src="images/nail1.jpeg" alt="Nail design 1">
+    <img src="images/nail10.jpeg" alt="Nail design 10">
+    <img src="images/nail11.jpeg" alt="Nail design 11">
+    <img src="images/nail8.jpeg" alt="Nail design 8">
+  </div>
+
+  <a href="gallery.html" class="cta-btn view-gallery-btn">
+    View Full Gallery
+  </a>
+
+</section>
+
+</main>
+
+<footer>
+  <p>Follow us on Instagram</p>
+  <a href="https://www.instagram.com/nailssxmocha/" target="_blank" rel="noopener noreferrer" class="social-btn">
+    <div class="social-icon">
+      <img src="images/instagram.png" alt="Instagram icon">
+    </div>
+  </a>
+</footer>
+
+<script>
+  document.querySelectorAll('.social-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+      icon.style.background = '#f7e6ea';
+      icon.style.transform = 'scale(1)';
+    });
+  });
+
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+let isInitialLoad = true;
+
+  window.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash;
+
+  navLinks.forEach(l => l.classList.remove("active"));
+
+  if (hash) {
+    const targetLink = document.querySelector(`nav a[href="${hash}"]`);
+    if (targetLink) {
+      targetLink.classList.add("active");
+    }
+  } else {
+
+    const homeLink = document.querySelector('nav a[href="#home"]');
+    if (homeLink) {
+      homeLink.classList.add("active");
+    }
   }
 
-  .nav {
-    flex-direction: column;           
-    align-items: center;
+  setTimeout(() => {
+    isInitialLoad = false;
+  }, 500);
+});
+
+  let isClickScrolling = false;
+
+  navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    if (
+      href === "#home" &&
+      (window.location.hash === "" || window.location.hash === "#home")
+    ) {
+      e.preventDefault();
+      return;
+    }
+
+    if (href.startsWith("#")) {
+      isClickScrolling = true;
+
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+
+      setTimeout(() => {
+        isClickScrolling = false;
+      }, 600);
+    }
+  });
+});
+
+  window.addEventListener("scroll", () => {
+  if (isClickScrolling || isInitialLoad) return;
+
+  if (window.scrollY < 100) {
+    navLinks.forEach(link => link.classList.remove("active"));
+    document.querySelector('nav a[href="#home"]').classList.add("active");
+    return;
   }
 
-  nav {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;                         
+  let current = "";
 
-  }
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
 
-  nav a,
-  .book-btn {
-    margin: 2px;                  
-    white-space: nowrap;         
-    display: inline-block;
-  }
+    if (rect.top <= 185 && rect.bottom >= 180) {
+      current = section.id;
+    }
+  });
 
-  .book-btn {
-    padding: 6px 14px;           
-    font-size: 14px;
-  }
+  navLinks.forEach(link => link.classList.remove("active"));
 
-  .container {
-    padding: 20px;
+  if (current === "home" || current === "gallery") {
+    document.querySelector('nav a[href="#home"]').classList.add("active");
+  } 
+  else if (current === "services") {
+    document.querySelector('nav a[href="#services"]').classList.add("active");
   }
+});
+</script>
 
-  #services {
-    scroll-margin-top: 180px;
-  }
 
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
+</body>
+</html>
 
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .policy-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
