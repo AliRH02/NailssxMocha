@@ -26,6 +26,7 @@
     "navServices": "Services",
     "navGallery": "Gallery",
     "navPolicy": "Policy",
+    "galleryPageTitle": "Nail Gallery",
     "navBook": "Book"
   },
   "es": {
@@ -55,6 +56,7 @@
     "navServices": "Servicios",
     "navGallery": "Galería",
     "navPolicy": "Políticas",
+    "galleryPageTitle": "Galería de Uñas",
     "navBook": "Reservar"
   }
 }
