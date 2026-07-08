@@ -5,8 +5,16 @@ fetch("translations.json")
   .then(res => res.json())
   .then(data => {
     translations = data;
-    const userLang = navigator.language || navigator.userLanguage;
-    currentLang = userLang.startsWith('es') ? 'es' : 'en';
+
+    const savedLanguage = localStorage.getItem("language");
+
+    if (savedLanguage) {
+      currentLang = savedLanguage;
+    } else {
+      const userLang = navigator.language || navigator.userLanguage;
+      currentLang = userLang.startsWith("es") ? "es" : "en";
+    }
+
     setLanguage(currentLang);
   });
 
