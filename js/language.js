@@ -23,5 +23,13 @@ function setLanguage(lang) {
   });
 }
 
-document.getElementById("lang-en").addEventListener("click", () => setLanguage("en"));
-document.getElementById("lang-es").addEventListener("click", () => setLanguage("es"));
+const langEN = document.getElementById("lang-en");
+const langES = document.getElementById("lang-es");
+
+if (langEN) {
+  langEN.addEventListener("click", () => setLanguage("en"));
+}
+
+if (langES) {
+  langES.addEventListener("click", () => setLanguage("es"));
+}
