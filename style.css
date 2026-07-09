@@ -141,6 +141,12 @@ html {
   color: #2D2D2D;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
+
+.lang-switcher button.active {
+  background: #FC98C9;
+  color: #2D2D2D;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
 /* =========================
    HERO
 ========================= */
