@@ -3,10 +3,10 @@
 
 <head>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NailssxMocha</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="homeWebTitle"></title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,121 +16,177 @@
     <div class="brand">
       <img src="images\Logo.jpg" alt="Nails x Mocha Logo">
     </div>
+
     <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="#policy">Policy</a>
-      <a href="https://nailssxmocha-booking.as.me/" class="book-btn">Book</a>
+      <a href="#home" data-i18n="navHome"></a>
+      <a href="#services" data-i18n="navServices"></a>
+      <a href="gallery.html" data-i18n="navGallery"></a>
+      <a href="#policy" data-i18n="navPolicy"></a>
+      <a href="https://nailssxmocha-booking.as.me/" class="book-btn" data-i18n="navBook"></a>
     </nav>
+
+    <div class="lang-switcher">
+      <button id="lang-en">EN</button>
+      <button id="lang-es">ES</button>
+    </div>
   </div>
 </header>
+
 
 <main class="container">
 
 <section id="home" class="hero">
-<h1>NailssxMocha</h1>
-<p>Gel X • Acrygel • Gel Manicure</p>
-<a href="https://nailssxmocha-booking.as.me/" class="cta-btn">Book Appointment</a>
+  <h1 data-i18n="homeTitle"></h1>
+  <p data-i18n="homeSubtitle"></p>
+
+  <a href="https://nailssxmocha-booking.as.me/" class="cta-btn" data-i18n="bookBtn"></a>
 </section>
+
+
 <section id="policy" class="policy">
-<h1 class="policy-title">Policies / Políticas</h1>
 
-    <div class="policy-grid">
+<h1 class="policy-title" data-i18n="policyTitle">
+</h1>
 
-      <div class="policy-card">
-        <div class="icon">
-          <img src="images/icons_appointment.png" alt="Appointments icon">
-        </div>
+<div class="policy-grid">
 
-        <h2>Appointments</h2>
-       <p>Please arrive on time. A 20-minute grace period is allowed.</p>
-        <p>If you are running late, your session may be shortened or rescheduled.</p>
-        <p>If you need to cancel or reschedule, please give at least 48 hours notice.</p>
-        <p>No guests allowed.</p>
-        <p>Submit your inspiration photos the same day you book your appointment.</p>
-      </div>
+  <div class="policy-card">
 
-      <div class="policy-card">
-        <div class="icon">
-          <img src="images/icons_wallet.png" alt="Payments icon">
-        </div>
-
-        <h2>Deposits</h2>
-
-        <p>A $10 deposit is required to secure your appointment.</p>
-        <p>Deposits are non-refundable. No deposit means no appointment.</p>
-        <p>Payments are due immediately after your appointment.</p>
-        <p>We accept Cash and Card(with an extra fee of $2)</p>
-        <p>If you have any questions, please feel free to reach out to me. I am happy to help</p>
-      </div>
-
-
+    <div class="icon">
+      <img src="images/icons_appointment.png" alt="Appointments icon">
     </div>
-  </section>
 
+    <h2 data-i18n="policySubtitle1"></h2>
+    <p data-i18n="policy1Description1"></p>
+    <p data-i18n="policy1Description2"></p>
+    <p data-i18n="policy1Description3"> </p>
+    <p data-i18n="policy1Description4">
+    </p>
+    <p data-i18n="policy1Description5"></p>
+  </div>
+
+
+  <div class="policy-card">
+    <div class="icon">
+      <img src="images/icons_wallet.png" alt="Payments icon">
+    </div>
+    <h2 data-i18n="policySubtitle2"></h2>
+    <p data-i18n="policy2Description1"></p>
+    <p data-i18n="policy2Description2"></p>
+    <p data-i18n="policy2Description3"> </p>
+    <p data-i18n="policy2Description4"></p>
+    <p data-i18n="policy2Description5"> </p>
+</div>
+</div>
+</section>
 
 <section id="services" class="services">
-  <h2 class="service-title">Services & Pricing</h2>
-<h3>Extensions</h3>
-<p class="service-note">Designs Included</p>
-<h4>Nail Extensions</h4>
+<h2 class="service-title" data-i18n="servicesTitle"></h2>
+
+<h3 data-i18n="Extensions"></h3>
+<p class="service-note" data-i18n="Extensionsnote"></p>
+<h4 data-i18n="nailExtensions"></h4>
+
 <div class="service-list">
-    <p><span>Gel-X</span><span>$10</span></p>
-    <p><span>Acrygel</span><span>$15</span></p>
+  <p><span></span><span>$10</span></p>
+  <p><span></span><span>$15</span></p>
+</div>
 
-  </div> 
+<h4 data-i18n="nailLength"></h4>
 
-  <h4>Nail Length</h4>
+<div class="service-list">
+  <p>
+    <span data-i18n="short"></span>
+    <span>$40</span>
+  </p>
 
-  <div class="service-list">
-    <p><span>Short (1–2 magnet)</span><span>$40</span></p>
-    <p><span>Medium (3–4 magnet)</span><span>$45</span></p>
-    <p><span>Long (5–7 magnet)</span><span>$55</span></p>
-    <p><span>X Long (8–10 magnet)</span><span>$65</span></p>
-  </div>
+  <p>
+    <span data-i18n="medium"></span>
+    <span>$45</span>
+  </p>
 
-<h3>Structure Manicure</h3>
-<p class="service-note">Natural Nail Only</p>
+  <p>
+    <span data-i18n="long"></span>
+    <span>$55</span>
+  </p>
 
-  <div class="service-list">
-    <p><span>Single Polish Color</span><span>$35</span></p>
-    <p><span>Rubber Gel</span><span>$50</span></p>
-    <p><span>Builder Gel</span><span>$60</span></p>  </div>
+  <p>
+    <span data-i18n="xlong"></span>
+    <span>$65</span>
+  </p>
 
-  <h3>Pedicure</h3>
+</div>
 
-  <div class="service-list">
-    <p><span>Classic Dry</span><span>$40</span></p>
-    <p><span>Basic</span><span>$45</span></p>
-    <p><span>Deluxe</span><span>$60</span></p>
-  </div>
+
+<h3 data-i18n="StructManicure"></h3>
+
+<p class="service-note" data-i18n="StructManicurenote"></p>
+
+<div class="service-list">
+
+  <p>
+    <span data-i18n="singlePolishColor"></span>
+    <span>$35</span>
+  </p>
+
+  <p>
+    <span data-i18n="rubberGel"></span>
+    <span>$50</span>
+  </p>
+
+  <p>
+    <span data-i18n="builderGel"></span>
+    <span>$60</span>
+  </p>
+</div>
+
+<h3 data-i18n="pedicure"></h3>
+<div class="service-list">
+
+  <p>
+    <span data-i18n="classicDry"></span>
+    <span>$40</span>
+  </p>
+  <p>
+    <span data-i18n="basic"></span>
+    <span>$45</span>
+  </p>
+  <p>
+    <span data-i18n="deluxe"></span>
+    <span>$60</span>
+  </p>
+
+</div>
 </section>
+
+
+
 <section id="gallery">
-  <h2 class="gallery-title">Featured Nails</h2>
 
-  <div class="gallery">
-    <img src="images/nail1.jpeg" alt="Nail design 1">
-    <img src="images/nail10.jpeg" alt="Nail design 10">
-    <img src="images/nail11.jpeg" alt="Nail design 11">
-    <img src="images/nail8.jpeg" alt="Nail design 8">
-  </div>
+<h2 class="gallery-title" data-i18n="galleryTitle"></h2>
 
-  <a href="gallery.html" class="cta-btn view-gallery-btn">
-    View Full Gallery
-  </a>
 
+<div class="gallery">
+
+<img src="images/nail1.jpeg" alt="Nail design 1">
+<img src="images/nail10.jpeg" alt="Nail design 10">
+<img src="images/nail11.jpeg" alt="Nail design 11">
+<img src="images/nail8.jpeg" alt="Nail design 8">
+</div>
+<a href="gallery.html" class="cta-btn view-gallery-btn" data-i18n="viewGallery"></a>
 </section>
-
 </main>
-
 <footer>
-  <p>Follow us on Instagram</p>
-  <a href="https://www.instagram.com/nailssxmocha/" target="_blank" rel="noopener noreferrer" class="social-btn">
-    <div class="social-icon">
-      <img src="images/instagram.png" alt="Instagram icon">
-    </div>
-  </a>
+
+<p data-i18n="instagram"></p>
+
+<a href="https://www.instagram.com/nailssxmocha/" target="_blank" rel="noopener noreferrer" class="social-btn">
+
+<div class="social-icon">
+<img src="images/instagram.png" alt="Instagram icon">
+</div>
+
+</a>
 </footer>
 
 <script>
@@ -227,7 +283,7 @@ else if (current === "policy") {
   }
 });
 </script>
-
+<script src="js/language.js"></script>
 
 </body>
 </html>
