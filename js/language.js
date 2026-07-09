@@ -29,6 +29,10 @@ function setLanguage(lang) {
       el.textContent = translations[lang][key];
     }
   });
+  if (langEN && langES) {
+    langEN.classList.toggle("active", lang === "en");
+    langES.classList.toggle("active", lang === "es");
+  }
 }
 
 const langEN = document.getElementById("lang-en");
