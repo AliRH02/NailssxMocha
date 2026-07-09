@@ -1,7 +1,7 @@
 {
   "en": {
-    "galleyTitle": "Gallery | NailssxMocha",
-    "indexTitle": "Home | NailssxMocha",
+    "galleyWebTitle": "Gallery | NailssxMocha",
+    "homeWebTitle": "Home | NailssxMocha",
     "homeTitle": "NailssxMocha",
     "homeSubtitle": "Gel X • Acrygel • Gel Manicure",
     "bookBtn": "Book Appointment",
@@ -47,8 +47,8 @@
     "navBook": "Book"
   },
   "es": {
-    "galleyTitle": "Galeria | NailssxMocha",
-    "indexTitle": "Inicio | NailssxMocha",
+    "galleyWebTitle": "Galeria | NailssxMocha",
+    "homeWebTitle": "Inicio | NailssxMocha",
     "homeTitle": "NailssxMocha",
     "homeSubtitle": "Gel X • Acrygel • Manicura de Gel",
     "bookBtn": "Reservar Cita",
