@@ -703,6 +703,78 @@ footer p {
 }
 
 /* =========================
+   SERVICE TIERS
+========================= */
+
+.service-tiers {
+  margin-top: 55px;
+  padding: 30px 10px 15px;
+  border-top: 1px solid #edc0d6;
+}
+
+.tier-title {
+  font-family: 'MonteCarlo', cursive;
+  font-size: 38px;
+  margin-bottom: 30px;
+  color: #2D2D2D;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 950px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.tier-card {
+  background: #FFFCCF;
+  border: 1px solid #edc0d6;
+  border-radius: 16px;
+  padding: 25px 22px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(139, 94, 94, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tier-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(139, 94, 94, 0.17);
+}
+
+.tier-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  text-align: center;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #FC98C9;
+}
+
+.tier-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tier-card li {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.tier-card li::before {
+  content: "✦";
+  color: #FC98C9;
+  position: absolute;
+  left: 0;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
@@ -774,6 +846,19 @@ footer p {
 
   .service-info h3 {
     font-size: 15px;
+  }
+    .tier-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 450px;
+  }
+
+  .tier-card {
+    padding: 22px;
+  }
+
+  .tier-title {
+    font-size: 34px;
   }
 
    .lang-switcher {
