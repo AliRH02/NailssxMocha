@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NailssxMocha</title>
+  <title data-i18n="policyTitle"></title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&display=swap" rel="stylesheet">
 </head>
@@ -13,70 +13,95 @@
 
 <header>
   <div class="nav">
+
     <div class="brand">
       <img src="images/Logo.jpg" alt="Nails x Mocha Logo">
     </div>
 
     <nav>
-      <a href="index.html#home">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="policy.html" class="active">Policy</a>
-      <a href="https://nailssxmocha-booking.as.me/" class="book-btn">Book</a>
+      <a href="index.html#home" data-i18n="navHome"></a>
+      <a href="index.html#services" data-i18n="navServices"></a>
+      <a href="gallery.html" data-i18n="navGallery"></a>
+      <a href="policy.html" class="active" data-i18n="navPolicy"></a>
+      <a href="https://nailssxmocha-booking.as.me/"
+         class="book-btn" data-i18n="navBook"></a>
     </nav>
+
+    <div class="lang-switcher">
+      <button id="lang-en">EN</button>
+      <button id="lang-es">ES</button>
+    </div>
+
   </div>
 </header>
 
 <main class="container">
 
   <section class="policy-page">
-    <h1 class="policy-title">Policies / Políticas</h1>
+
+    <h1 class="policy-title" data-i18n="policyTitle"></h1>
 
     <div class="policy-grid">
 
+      <!-- APPOINTMENTS -->
+
       <div class="policy-card">
+
         <div class="icon">
           <img src="images/icons_appointment.png" alt="Appointments icon">
         </div>
 
-        <h2>Appointments</h2>
+        <h2 data-i18n="policySubtitle1"></h2>
 
-        <p>Please arrive on time. A 20-minute grace period is allowed.</p>
-        <p>If you are running late, your session may be shortened or rescheduled.</p>
-        <p>If you need to cancel or reschedule, please give at least 48 hours notice.</p>
-        <p>No guests allowed.</p>
-        <p>Submit your inspiration photos the same day you book your appointment.</p>
+        <p data-i18n="policy1Description1"></p>
+        <p data-i18n="policy1Description2"></p>
+        <p data-i18n="policy1Description3"></p>
+        <p data-i18n="policy1Description4"></p>
+        <p data-i18n="policy1Description5"></p>
+        <p data-i18n="policy1Description6"></p>
+
       </div>
 
+      <!-- DEPOSITS -->
+
       <div class="policy-card">
+
         <div class="icon">
           <img src="images/icons_wallet.png" alt="Payments icon">
         </div>
 
-        <h2>Deposits</h2>
+        <h2 data-i18n="policySubtitle2"></h2>
 
-        <p>A $10 deposit is required to secure your appointment.</p>
-        <p>Deposits are non-refundable. No deposit means no appointment.</p>
-        <p>Payments are due immediately after your appointment.</p>
-        <p>We accept Cash and Card(with an extra fee of $2)</p>
-        <p>If you have any questions, please feel free to reach out to me. I am happy to help</p>
+        <p data-i18n="policy2Description1"></p>
+        <p data-i18n="policy2Description2"></p>
+        <p data-i18n="policy2Description3"></p>
+        <p data-i18n="policy2Description4"></p>
+        <p data-i18n="policy2Description5"></p>
+
       </div>
 
     </div>
+
   </section>
 
 </main>
 
 <footer>
-  <p>Follow us on Instagram</p>
+  <p data-i18n="instagram"></p>
 
-  <a href="https://www.instagram.com/nailssxmocha/" target="_blank" rel="noopener noreferrer" class="social-btn">
+  <a href="https://www.instagram.com/nailssxmocha/"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="social-btn">
+
     <div class="social-icon">
       <img src="images/instagram.png" alt="Instagram icon">
     </div>
-  </a>
 
+  </a>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
