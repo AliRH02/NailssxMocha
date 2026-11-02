@@ -773,6 +773,27 @@ footer p {
   position: absolute;
   left: 0;
 }
+.tier-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: #6D5A60;
+  text-align: center;
+  margin: -18px auto 30px;
+  line-height: 1.8;
+  letter-spacing: 0.4px;
+}
+
+.tier-subtitle::before {
+  content: "✦";
+  color: #FC98C9;
+  margin-right: 10px;
+}
+
+.tier-subtitle::after {
+  content: "✦";
+  color: #FC98C9;
+  margin-left: 10px;
+}
 
 /* =========================
    RESPONSIVE
