@@ -783,17 +783,6 @@ footer p {
   letter-spacing: 0.4px;
 }
 
-.tier-subtitle::before {
-  content: "✦";
-  color: #FC98C9;
-  margin-right: 10px;
-}
-
-.tier-subtitle::after {
-  content: "✦";
-  color: #FC98C9;
-  margin-left: 10px;
-}
 
 /* =========================
    RESPONSIVE
