@@ -783,6 +783,45 @@ footer p {
   letter-spacing: 0.4px;
 }
 
+/* =========================
+   GALLERY FILTERS
+========================= */
+
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 auto 30px;
+}
+
+.filter-btn {
+  background: #FFFEBF;
+  border: 1px solid #edc0d6;
+  border-radius: 25px;
+  padding: 10px 22px;
+  color: #2D2D2D;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #FEE4E4;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #FC98C9;
+  border-color: #FC98C9;
+}
+
+.gallery img[hidden] {
+  display: none;
+}
+
+
 
 /* =========================
    RESPONSIVE
@@ -844,6 +883,14 @@ footer p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
     padding: 0;
+  }
+   .gallery-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 15px;
+    font-size: 12px;
   }
 
   .service-image {
