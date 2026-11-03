@@ -68,6 +68,10 @@
     "navHome": "Home",
     "navServices": "Services",
     "navGallery": "Gallery",
+    "filterAll": "All Designs",
+    "filterTier1": "Tier One",
+    "filterTier2": "Tier Two",
+    "filterTier3": "Tier Three",
     "navPolicy": "Policy",
     "galleryPageTitle": "Nail Gallery",
     "navBook": "Book"
@@ -137,6 +141,10 @@
     "tier3Item10": "Puntas francesas o diseños con abundante pedrería",
     "galleryTitle": "Uñas Destacadas",
     "viewGallery": "Ver Galería Completa",
+    "filterAll": "Todos los diseños",
+    "filterTier1": "Nivel Uno",
+    "filterTier2": "Nivel Dos",
+    "filterTier3": "Nivel Tres"
     "instagram": "Síguenos en Instagram",
     "navHome": "Inicio",
     "navServices": "Servicios",
