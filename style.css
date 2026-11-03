@@ -797,15 +797,19 @@ footer p {
 }
 
 .filter-btn {
+  display: inline-block;
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
   border-radius: 0;
   padding: 8px 2px;
-  color: #6D5A60;
+  color: #2D2D2D;
   font-family: 'Playfair Display', serif;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
+  opacity: 1;
+  visibility: visible;
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -884,7 +888,7 @@ footer p {
     gap: 12px;
     padding: 0;
   }
-   gallery-filters {
+   .gallery-filters {
     gap: 18px;
     margin-bottom: 25px;
   }
