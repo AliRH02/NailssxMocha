@@ -1,6 +1,7 @@
 let translations = {};
 let currentLang = "en";
 
+
 fetch("translations.json")
   .then(res => res.json())
   .then(data => {
