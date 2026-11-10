@@ -1,6 +1,6 @@
 
 /* =========================
-   DEFAULT THEME
+   DEFAULT COLORS
 ========================= */
 
 :root {
@@ -11,12 +11,11 @@
   --text: #2D2D2D;
   --card: #FEE4E4;
   --border: #edc0d6;
-  --accent-text: #FC98C9;
   --soft-accent: #FFFEBF;
 }
 
 /* =========================
-   CHRISTMAS THEME
+   CHRISTMAS COLORS
 ========================= */
 
 html[data-theme="christmas"] {
@@ -27,32 +26,31 @@ html[data-theme="christmas"] {
   --text: #302D29;
   --card: #FFFFFF;
   --border: #C6B78B;
-  --accent-text: #315B43;
   --soft-accent: #E5EBD9;
 }
 
 /* =========================
-   GLOBAL
+   PAGE BACKGROUND
 ========================= */
 
 body {
-  background-color: var(--background);
+  background-color: var(--background) !important;
   color: var(--text);
 }
 
 /* HEADER */
 
 header {
-  background-color: var(--header);
-  border-bottom-color: var(--primary);
+  background-color: var(--header) !important;
+  border-bottom-color: var(--primary) !important;
 }
 
 nav a {
   color: var(--text);
 }
 
-nav a:hover,
-nav a.active {
+nav a.active,
+nav a:hover {
   background-color: var(--secondary);
 }
 
@@ -60,89 +58,59 @@ nav a.active {
 
 .book-btn,
 .cta-btn {
-  background-color: var(--primary);
-  color: #FFFFFF;
-}
-
-.book-btn:hover,
-.cta-btn:hover {
-  opacity: 0.85;
+  background-color: var(--primary) !important;
+  color: white !important;
 }
 
 /* LANGUAGE SWITCHER */
 
 .lang-switcher {
-  background-color: var(--secondary);
+  background-color: var(--secondary) !important;
   border-color: var(--border);
 }
 
-.lang-switcher button {
-  color: var(--text);
-}
-
 .lang-switcher button.active {
-  background-color: var(--primary);
-  color: #FFFFFF;
+  background-color: var(--primary) !important;
+  color: white;
 }
 
 /* SERVICES */
 
 .services {
-  background-color: var(--secondary);
-}
-
-.services h3,
-.services h4,
-.service-title,
-.tier-title {
-  color: var(--text);
+  background-color: var(--secondary) !important;
 }
 
 .service-card,
 .service-info,
 .tier-card {
-  background-color: var(--card);
-  border-color: var(--border);
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
 }
 
 /* POLICY */
 
 .policy-page {
-  background-color: var(--background);
+  background-color: var(--background) !important;
 }
 
 .policy-card {
-  background-color: var(--card);
-  border-color: var(--border);
-}
-
-.policy-card p {
-  color: var(--text);
+  background-color: var(--card) !important;
+  border-color: var(--border) !important;
 }
 
 .icon {
-  background-color: var(--soft-accent);
+  background-color: var(--soft-accent) !important;
   border-color: var(--border);
 }
 
 /* GALLERY */
 
-.gallery-title,
-.policy-title {
-  color: var(--text);
-}
-
-.filter-btn {
-  color: var(--text);
-}
-
-.filter-btn:hover,
 .filter-btn.active {
   color: var(--primary);
   border-bottom-color: var(--primary);
 }
 
-/* SERVICE TIERS */
+/* SERVICE DETAILS */
 
 .tier-card h4 {
   border-bottom-color: var(--primary);
@@ -152,20 +120,15 @@ nav a.active {
   color: var(--primary);
 }
 
-.tier-subtitle {
-  color: var(--text);
-}
-
 /* FOOTER */
 
 footer {
-  background-color: var(--primary);
-  color: #FFFFFF;
+  background-color: var(--primary) !important;
+  color: white;
 }
 
 footer .social-icon {
   background-color: var(--soft-accent);
-  border-color: var(--border);
 }
 
 /* LIGHTBOX */
