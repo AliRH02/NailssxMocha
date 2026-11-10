@@ -1,3 +1,4 @@
+
 /* =========================
    DEFAULT THEME
 ========================= */
@@ -11,13 +12,14 @@
   --card: #FEE4E4;
   --border: #edc0d6;
   --accent-text: #FC98C9;
+  --soft-accent: #FFFEBF;
 }
 
 /* =========================
    CHRISTMAS THEME
 ========================= */
 
-[data-theme="christmas"] {
+html[data-theme="christmas"] {
   --background: #F7F3E9;
   --header: #E5EBD9;
   --primary: #315B43;
@@ -26,12 +28,19 @@
   --card: #FFFFFF;
   --border: #C6B78B;
   --accent-text: #315B43;
+  --soft-accent: #E5EBD9;
 }
+
+/* =========================
+   GLOBAL
+========================= */
 
 body {
   background-color: var(--background);
   color: var(--text);
 }
+
+/* HEADER */
 
 header {
   background-color: var(--header);
@@ -42,44 +51,98 @@ nav a {
   color: var(--text);
 }
 
-.book-btn,
-.cta-btn {
-  background-color: var(--primary);
-  color: white;
-}
-
-.services {
+nav a:hover,
+nav a.active {
   background-color: var(--secondary);
 }
 
-.policy-page {
-  background-color: var(--background);
+/* BUTTONS */
+
+.book-btn,
+.cta-btn {
+  background-color: var(--primary);
+  color: #FFFFFF;
 }
 
-.policy-card,
-.tier-card {
-  background-color: var(--card);
-  border-color: var(--border);
+.book-btn:hover,
+.cta-btn:hover {
+  opacity: 0.85;
 }
 
-.service-card,
-.service-info {
-  background-color: var(--background);
-}
+/* LANGUAGE SWITCHER */
 
 .lang-switcher {
   background-color: var(--secondary);
   border-color: var(--border);
 }
 
-.lang-switcher button.active {
-  background-color: var(--primary);
-  color: white;
+.lang-switcher button {
+  color: var(--text);
 }
 
+.lang-switcher button.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+/* SERVICES */
+
+.services {
+  background-color: var(--secondary);
+}
+
+.services h3,
+.services h4,
+.service-title,
+.tier-title {
+  color: var(--text);
+}
+
+.service-card,
+.service-info,
+.tier-card {
+  background-color: var(--card);
+  border-color: var(--border);
+}
+
+/* POLICY */
+
+.policy-page {
+  background-color: var(--background);
+}
+
+.policy-card {
+  background-color: var(--card);
+  border-color: var(--border);
+}
+
+.policy-card p {
+  color: var(--text);
+}
+
+.icon {
+  background-color: var(--soft-accent);
+  border-color: var(--border);
+}
+
+/* GALLERY */
+
+.gallery-title,
+.policy-title {
+  color: var(--text);
+}
+
+.filter-btn {
+  color: var(--text);
+}
+
+.filter-btn:hover,
 .filter-btn.active {
+  color: var(--primary);
   border-bottom-color: var(--primary);
 }
+
+/* SERVICE TIERS */
 
 .tier-card h4 {
   border-bottom-color: var(--primary);
@@ -89,16 +152,24 @@ nav a {
   color: var(--primary);
 }
 
-footer {
-  background-color: var(--primary);
-  color: white;
+.tier-subtitle {
+  color: var(--text);
 }
 
-.icon {
-  background-color: var(--header);
+/* FOOTER */
+
+footer {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+footer .social-icon {
+  background-color: var(--soft-accent);
   border-color: var(--border);
 }
 
-html[data-theme="christmas"] body {
-    background-color: red !important;
+/* LIGHTBOX */
+
+#lightbox button {
+  color: var(--soft-accent);
 }
