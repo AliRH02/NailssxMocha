@@ -8,7 +8,7 @@
 // "default"
 // "christmas"
 
-const ACTIVE_THEME = "christmas";
+const ACTIVE_THEME = "default";
 
 function applyTheme(theme) {
 
