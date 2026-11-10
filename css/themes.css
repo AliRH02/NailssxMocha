@@ -19,14 +19,14 @@
 ========================= */
 
 html[data-theme="christmas"] {
-  --background: #F7F3E9;
-  --header: #E5EBD9;
-  --primary: #315B43;
-  --secondary: #E8D7D1;
-  --text: #302D29;
-  --card: #FFFFFF;
-  --border: #C6B78B;
-  --soft-accent: #E5EBD9;
+  --background: #F9F0E3;
+  --header: #174A35;
+  --primary: #A62935;
+  --secondary: #E8C9D0;
+  --text: #34312D;
+  --card: #FFF9F1;
+  --border: #D6B66E;
+  --soft-accent: #F9F0E3;
 }
 
 /* =========================
