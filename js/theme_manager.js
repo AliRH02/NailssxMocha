@@ -1,7 +1,7 @@
 /* =========================
    THEME MANAGER
 ========================= */
-const ACTIVE_THEME = "default";
+const ACTIVE_THEME = "christmas";
 function applyTheme(theme) {
   document.documentElement.setAttribute(
     "data-theme",
