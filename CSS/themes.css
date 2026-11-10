@@ -1,1 +1,100 @@
+/* =========================
+   DEFAULT THEME
+========================= */
 
+:root {
+  --background: #FFFCCF;
+  --header: #FFFEBF;
+  --primary: #FC98C9;
+  --secondary: #FEE4E4;
+  --text: #2D2D2D;
+  --card: #FEE4E4;
+  --border: #edc0d6;
+  --accent-text: #FC98C9;
+}
+
+/* =========================
+   CHRISTMAS THEME
+========================= */
+
+[data-theme="christmas"] {
+  --background: #F7F3E9;
+  --header: #E5EBD9;
+  --primary: #315B43;
+  --secondary: #E8D7D1;
+  --text: #302D29;
+  --card: #FFFFFF;
+  --border: #C6B78B;
+  --accent-text: #315B43;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+header {
+  background-color: var(--header);
+  border-bottom-color: var(--primary);
+}
+
+nav a {
+  color: var(--text);
+}
+
+.book-btn,
+.cta-btn {
+  background-color: var(--primary);
+  color: white;
+}
+
+.services {
+  background-color: var(--secondary);
+}
+
+.policy-page {
+  background-color: var(--background);
+}
+
+.policy-card,
+.tier-card {
+  background-color: var(--card);
+  border-color: var(--border);
+}
+
+.service-card,
+.service-info {
+  background-color: var(--background);
+}
+
+.lang-switcher {
+  background-color: var(--secondary);
+  border-color: var(--border);
+}
+
+.lang-switcher button.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.filter-btn.active {
+  border-bottom-color: var(--primary);
+}
+
+.tier-card h4 {
+  border-bottom-color: var(--primary);
+}
+
+.tier-card li::before {
+  color: var(--primary);
+}
+
+footer {
+  background-color: var(--primary);
+  color: white;
+}
+
+.icon {
+  background-color: var(--header);
+  border-color: var(--border);
+}
