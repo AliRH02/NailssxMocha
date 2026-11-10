@@ -98,3 +98,7 @@ footer {
   background-color: var(--header);
   border-color: var(--border);
 }
+
+html[data-theme="christmas"] body {
+    background-color: red !important;
+}
