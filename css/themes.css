@@ -18,16 +18,58 @@
    CHRISTMAS COLORS
 ========================= */
 
+
 html[data-theme="christmas"] {
-  --background: #F9F0E3;
-  --header: #174A35;
-  --primary: #A62935;
-  --secondary: #E8C9D0;
-  --text: #34312D;
-  --card: #FFF9F1;
-  --border: #D6B66E;
-  --soft-accent: #F9F0E3;
+  --background: #F8F4E8;
+  --header: #E5EBD9;
+  --primary: #52745A;
+  --secondary: #E5EBD9;
+  --text: #393A32;
+  --card: #FFFDF7;
+  --border: #D8C394;
+  --soft-accent: #F1E9D6;
 }
+
+
+/* SOFT CHRISTMAS DETAILS */
+
+html[data-theme="christmas"] header {
+  background-color: #E5EBD9 !important;
+}
+
+html[data-theme="christmas"] nav a {
+  color: #393A32;
+}
+
+html[data-theme="christmas"] .book-btn,
+html[data-theme="christmas"] .cta-btn {
+  background-color: #52745A !important;
+  color: #FFFFFF !important;
+}
+
+html[data-theme="christmas"] .services {
+  background-color: #E5EBD9 !important;
+}
+
+html[data-theme="christmas"] .policy-card,
+html[data-theme="christmas"] .tier-card,
+html[data-theme="christmas"] .service-card {
+  background-color: #FFFDF7 !important;
+}
+
+html[data-theme="christmas"] footer {
+  background-color: #52745A !important;
+  color: #FFFFFF;
+}
+
+html[data-theme="christmas"] .tier-card h4 {
+  border-bottom-color: #D8C394;
+}
+
+html[data-theme="christmas"] .tier-card li::before {
+  color: #B96B68;
+}
+
 
 /* =========================
    PAGE BACKGROUND
@@ -130,6 +172,7 @@ footer {
 footer .social-icon {
   background-color: var(--soft-accent);
 }
+
 
 /* LIGHTBOX */
 
