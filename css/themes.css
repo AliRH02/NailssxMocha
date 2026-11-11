@@ -14,10 +14,10 @@
   --soft-accent: #FFFEBF;
 }
 
+
 /* =========================
    CHRISTMAS COLORS
 ========================= */
-
 
 html[data-theme="christmas"] {
   --background: #F8F4E8;
@@ -26,8 +26,10 @@ html[data-theme="christmas"] {
   --secondary: #E5EBD9;
   --text: #393A32;
   --card: #FFFDF7;
-  --border: #D8C394;
-  --soft-accent: #F1E9D6;
+  --border: #D9B9B0;
+  --soft-accent: #F4E5DF;
+  --christmas-red: #A94452;
+  --christmas-red-light: #F3DEDC;
 }
 
 
@@ -62,14 +64,46 @@ html[data-theme="christmas"] footer {
   color: #FFFFFF;
 }
 
+/* RED ACCENTS */
+
 html[data-theme="christmas"] .tier-card h4 {
-  border-bottom-color: #D8C394;
+  border-bottom-color: #A94452;
 }
 
 html[data-theme="christmas"] .tier-card li::before {
-  color: #B96B68;
+  color: #A94452;
 }
 
+html[data-theme="christmas"] .lang-switcher {
+  border-color: #D9B9B0;
+}
+
+html[data-theme="christmas"] .lang-switcher button.active {
+  background-color: #A94452 !important;
+}
+
+html[data-theme="christmas"] nav a.active,
+html[data-theme="christmas"] nav a:hover {
+  background-color: #F3DEDC;
+}
+
+html[data-theme="christmas"] .filter-btn.active {
+  color: #A94452;
+  border-bottom-color: #A94452;
+}
+
+html[data-theme="christmas"] .icon {
+  background-color: #F3DEDC !important;
+  border-color: #D9B9B0;
+}
+
+html[data-theme="christmas"] footer .social-icon {
+  background-color: #F4E5DF;
+}
+
+html[data-theme="christmas"] #lightbox button {
+  color: #F4E5DF;
+}
 
 /* =========================
    PAGE BACKGROUND
