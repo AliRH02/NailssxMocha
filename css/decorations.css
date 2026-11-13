@@ -1,1 +1,69 @@
 
+
+
+/* =========================
+   SEASONAL DECORATIONS
+========================= */
+
+/* Hide all seasonal decorations by default */
+
+.seasonal-decorations {
+  display: none;
+}
+
+
+/* =========================
+   CHRISTMAS DECORATIONS
+========================= */
+
+html[data-theme="christmas"] .seasonal-decorations {
+  display: block;
+}
+
+
+
+/* =========================
+   CHRISTMAS GARLAND
+========================= */
+
+html[data-theme="christmas"] header {
+  position: relative;
+  z-index: 10;
+}
+
+.christmas-garland {
+  display: none;
+}
+
+html[data-theme="christmas"] .christmas-garland {
+  display: flex;
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -55px;
+
+  height: 75px;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.christmas-garland img {
+  height: 100%;
+  width: 15%;
+  flex-shrink: 0;
+  object-fit: fill;
+
+  margin-right: -0.5%;
+}
+
+/* =========================
+   CHRISTMAS TIER DECORATIONS
+========================= */
+
+html[data-theme="christmas"] .tier-card li::before {
+  content: "🎄";
+  color: inherit;
+}
+
