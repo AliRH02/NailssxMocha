@@ -20,19 +20,18 @@
 ========================= */
 
 html[data-theme="christmas"] {
-  --background: #F8F4E8;
-  --header: #E5EBD9;
-  --primary: #52745A;
-  --secondary: #E5EBD9;
+  --background: #F8F6EF;
+  --header: #E4EBDD;
+  --primary: #3F674B;
+  --secondary: #E4EBDD;
   --text: #393A32;
-  --card: #FFFDF7;
-  --border: #D9B9B0;
-  --soft-accent: #F4E5DF;
-  --christmas-red: #A94452;
-  --christmas-red-light: #F3DEDC;
+  --card: #FFF9F2;
+  --border: #D5B9AD;
+  --soft-accent: #F2DEDF;
+
+  --christmas-red: #A74750;
+  --christmas-red-light: #F2DEDF;
 }
-
-
 /* SOFT CHRISTMAS DETAILS */
 
 html[data-theme="christmas"] header {
@@ -79,7 +78,8 @@ html[data-theme="christmas"] .lang-switcher {
 }
 
 html[data-theme="christmas"] .lang-switcher button.active {
-  background-color: #A94452 !important;
+  background-color: var(--primary) !important;
+  color: white !important;
 }
 
 html[data-theme="christmas"] nav a.active,
@@ -129,6 +129,30 @@ nav a.active,
 nav a:hover {
   background-color: var(--secondary);
 }
+
+
+/* =========================
+   SEASONAL LOGOS
+========================= */
+
+/* Default logo is visible */
+.logo-default {
+  display: block;
+}
+
+.logo-christmas {
+  display: none;
+}
+
+/* Christmas logo */
+html[data-theme="christmas"] .logo-default {
+  display: none;
+}
+
+html[data-theme="christmas"] .logo-christmas {
+  display: block;
+}
+
 
 /* BUTTONS */
 
@@ -212,4 +236,60 @@ footer .social-icon {
 
 #lightbox button {
   color: var(--soft-accent);
+}
+/* =========================
+   CHRISTMAS INTERACTIVE DETAILS
+========================= */
+
+/* Language switcher */
+html[data-theme="christmas"] .lang-switcher {
+  background-color: var(--card) !important;
+  border-color: var(--border);
+}
+
+html[data-theme="christmas"] .lang-switcher button:hover {
+  background-color: var(--christmas-red-light);
+}
+
+/* Icons */
+html[data-theme="christmas"] .icon {
+  background-color: var(--christmas-red-light) !important;
+  border-color: var(--border);
+}
+
+/* Social media */
+html[data-theme="christmas"] footer .social-icon {
+  background-color: var(--soft-accent);
+}
+
+/* Navigation hover */
+html[data-theme="christmas"] nav a:hover,
+html[data-theme="christmas"] nav a.active {
+  background-color: var(--christmas-red-light);
+}
+
+/* Gallery filters */
+html[data-theme="christmas"] .filter-btn.active {
+  color: var(--christmas-red);
+  border-bottom-color: var(--christmas-red);
+}
+
+/* Tier decorations */
+html[data-theme="christmas"] .tier-card h4 {
+  border-bottom-color: var(--christmas-red);
+}
+
+html[data-theme="christmas"] .tier-card li::before {
+  color: var(--christmas-red);
+}
+
+/* Buttons */
+html[data-theme="christmas"] .book-btn:hover,
+html[data-theme="christmas"] .cta-btn:hover {
+  background-color: #34573E !important;
+}
+
+/* Lightbox */
+html[data-theme="christmas"] #lightbox button {
+  color: var(--christmas-red-light);
 }
