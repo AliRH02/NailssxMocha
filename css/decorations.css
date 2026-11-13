@@ -62,10 +62,10 @@ html[data-theme="christmas"] .christmas-garland {
    MOBILE CHRISTMAS GARLAND
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
   html[data-theme="christmas"] .christmas-garland img {
-    width: 24%;
+    width: 20%;
   }
 
 }
