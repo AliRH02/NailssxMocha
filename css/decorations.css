@@ -59,6 +59,18 @@ html[data-theme="christmas"] .christmas-garland {
 }
 
 /* =========================
+   MOBILE CHRISTMAS GARLAND
+========================= */
+
+@media (max-width: 600px) {
+
+  html[data-theme="christmas"] .christmas-garland img {
+    width: 24%;
+  }
+
+}
+
+/* =========================
    CHRISTMAS TIER DECORATIONS
 ========================= */
 
