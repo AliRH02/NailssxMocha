@@ -1,6 +1,5 @@
 
 
-
 /* =========================
    SEASONAL DECORATIONS
 ========================= */
@@ -62,10 +61,10 @@ html[data-theme="christmas"] .christmas-garland {
    MOBILE CHRISTMAS GARLAND
 ========================= */
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
   html[data-theme="christmas"] .christmas-garland img {
-    width: 20%;
+    width: 24%;
   }
 
 }
@@ -79,3 +78,342 @@ html[data-theme="christmas"] .tier-card li::before {
   color: inherit;
 }
 
+/* CHRISTMAS SECTION DIVIDER */
+
+.christmas-divider {
+  display: none;
+}
+
+html[data-theme="christmas"] .christmas-divider {
+  display: flex;
+  justify-content: center;
+  margin: -20px auto 30px;
+}
+
+.christmas-divider img {
+  width: 220px;
+  max-width: 75%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================
+   CHRISTMAS HERO LAMP
+========================= */
+
+.hero {
+  position: relative;
+}
+
+.hero-decorations {
+  display: none;
+}
+
+html[data-theme="christmas"] .hero-decorations {
+  display: block;
+}
+
+.christmas-lamp {
+  position: absolute;
+  right: 3%;
+  bottom: -5px;
+  width: 145px;
+  max-height: 85%;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* =========================
+   CHRISTMAS CLOSING SECTION
+========================= */
+
+.christmas-closing {
+  display: none;
+}
+
+html[data-theme="christmas"] .christmas-closing {
+  display: block;
+  position: relative;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 65px 30px 35px;
+  overflow: hidden;
+}
+
+.christmas-ornaments {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  max-height: 130px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+
+.christmas-closing-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.christmas-lettering {
+  width: 55%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+}
+
+.christmas-tree {
+  width: 30%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* =========================
+   MOBILE CHRISTMAS DETAILS
+========================= */
+
+@media (max-width: 600px) {
+
+  .christmas-lamp {
+    width: 85px;
+    right: 0;
+    bottom: 0;
+    opacity: 0.9;
+  }
+
+  html[data-theme="christmas"] .christmas-closing {
+    padding: 40px 10px 25px;
+  }
+
+  .christmas-ornaments {
+    max-height: 90px;
+  }
+
+  .christmas-closing-content {
+    gap: 8px;
+  }
+
+  .christmas-lettering {
+    width: 62%;
+  }
+
+  .christmas-tree {
+    width: 35%;
+  }
+
+}
+
+
+/* =========================================
+   CHRISTMAS WEBSITE DECORATIONS
+========================================= */
+
+/* Only show seasonal decorations in Christmas mode */
+
+.seasonal-decorations {
+  display: none;
+  pointer-events: none;
+}
+
+html[data-theme="christmas"] .seasonal-decorations {
+  display: block;
+}
+
+
+
+/* =========================================
+   SANTA'S FLYING SLEIGH
+========================================= */
+
+#services {
+  position: relative;
+  overflow: visible;
+}
+
+.christmas-sleigh {
+  position: absolute;
+  top: -15px;
+  left: -10%;
+  width: clamp(180px, 25vw, 360px);
+  z-index: 5;
+  transform: rotate(-8deg);
+  transform-origin: center;
+}
+
+.christmas-sleigh img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px rgba(40, 35, 25, 0.12));
+}
+
+
+/* =========================================
+   CHRISTMAS GIFT TAG SERVICE CARDS
+========================================= */
+
+html[data-theme="christmas"] .tier-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  /* Gift tag shape */
+  border: 1px solid #D5B9AD;
+  border-radius: 12px 12px 18px 18px;
+
+  /* Subtle paper texture */
+  background-color: #FFF9F2 !important;
+  background-image:
+    linear-gradient(
+      rgba(255, 253, 247, 0.86),
+      rgba(255, 253, 247, 0.86)
+    ),
+    url("../images/decorations/christmas/green-wrapping.png") !important;
+
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 12px rgba(60, 50, 35, 0.08);
+
+  padding-top: 42px;
+}
+
+/* Alternate the paper colors */
+
+html[data-theme="christmas"] .tier-card:nth-child(2) {
+  background-image:
+    linear-gradient(
+      rgba(255, 253, 247, 0.86),
+      rgba(255, 253, 247, 0.86)
+    ),
+    url("../images/decorations/christmas/beige-wrapping.png") !important;
+}
+
+html[data-theme="christmas"] .tier-card:nth-child(3) {
+  background-image:
+    linear-gradient(
+      rgba(255, 253, 247, 0.86),
+      rgba(255, 253, 247, 0.86)
+    ),
+    url("../images/decorations/christmas/green-wrapping.png") !important;
+}
+
+/* Small gift-tag hole */
+
+html[data-theme="christmas"] .tier-card::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #F8F6EF;
+  border: 1px solid #B9A38E;
+  z-index: 2;
+}
+
+/* Tag-like heading */
+
+html[data-theme="christmas"] .tier-card h4 {
+  color: #A74750;
+  border-bottom-color: rgba(167, 71, 80, 0.35);
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="christmas"] .tier-card p,
+html[data-theme="christmas"] .tier-card ul,
+html[data-theme="christmas"] .tier-card li {
+  position: relative;
+  z-index: 1;
+}
+
+/* Christmas list markers */
+
+html[data-theme="christmas"] .tier-card li::before {
+  content: "✦";
+  color: #A74750;
+}
+
+
+/* =========================================
+   GIFTS AROUND THE FOOTER
+========================================= */
+
+footer {
+  position: relative;
+  overflow: visible;
+}
+
+.christmas-gifts {
+  position: absolute;
+  top: -95px;
+  right: 5%;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  z-index: 4;
+}
+
+.christmas-gift {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 5px rgba(40, 35, 25, 0.12));
+}
+
+.gift-one {
+  width: 135px;
+}
+
+.gift-two {
+  width: 105px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   MOBILE ADJUSTMENTS
+========================================= */
+
+@media (max-width: 768px) {
+
+  .christmas-lamp {
+    width: 85px;
+    right: 1%;
+  }
+
+  .christmas-sleigh {
+    top: -42px;
+    left: 1%;
+    width: 48%;
+    transform: rotate(-8deg);
+  }
+
+  html[data-theme="christmas"] .tier-card {
+    padding-top: 38px;
+  }
+
+  .christmas-gifts {
+    top: -65px;
+    right: 3%;
+    gap: 0;
+  }
+
+  .gift-one {
+    width: 85px;
+  }
+
+  .gift-two {
+    width: 65px;
+    margin-bottom: 5px;
+  }
+}
