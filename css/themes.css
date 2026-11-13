@@ -1,295 +1,39 @@
 
 /* =========================
-   DEFAULT COLORS
+   THEME MANAGER
 ========================= */
 
-:root {
-  --background: #FFFCCF;
-  --header: #FFFEBF;
-  --primary: #FC98C9;
-  --secondary: #FEE4E4;
-  --text: #2D2D2D;
-  --card: #FEE4E4;
-  --border: #edc0d6;
-  --soft-accent: #FFFEBF;
+// Change this to select your theme:
+//
+// "default"
+// "christmas"
+
+const ACTIVE_THEME = "christmas";
+
+function applyTheme(theme) {
+
+  document.documentElement.setAttribute(
+    "data-theme",
+    theme
+  );
+
+  console.log("Active website theme:", theme);
 }
 
+// Apply selected theme
+applyTheme(ACTIVE_THEME);
 
-/* =========================
-   CHRISTMAS COLORS
-========================= */
+// Generate Christmas garland images
 
-html[data-theme="christmas"] {
-  --background: #F8F6EF;
-  --header: #E4EBDD;
-  --primary: #3F674B;
-  --secondary: #E4EBDD;
-  --text: #393A32;
-  --card: #FFF9F2;
-  --border: #D5B9AD;
-  --soft-accent: #F2DEDF;
+const garland = document.querySelector(".christmas-garland");
 
-  --christmas-red: #A74750;
-  --christmas-red-light: #F2DEDF;
-}
-/* SOFT CHRISTMAS DETAILS */
+if (garland) {
+  for (let i = 0; i < 12; i++) {
+    const img = document.createElement("img");
 
-html[data-theme="christmas"] header {
-  background-color: #E5EBD9 !important;
-}
+    img.src = "images/decorations/christmas/garland.png";
+    img.alt = "";
 
-html[data-theme="christmas"] nav a {
-  color: #393A32;
-}
-
-html[data-theme="christmas"] .book-btn,
-html[data-theme="christmas"] .cta-btn {
-  background-color: #52745A !important;
-  color: #FFFFFF !important;
-}
-
-html[data-theme="christmas"] .services {
-  background-color: #E5EBD9 !important;
-}
-
-html[data-theme="christmas"] .policy-card,
-html[data-theme="christmas"] .tier-card,
-html[data-theme="christmas"] .service-card {
-  background-color: #FFFDF7 !important;
-}
-
-html[data-theme="christmas"] footer {
-  background-color: #52745A !important;
-  color: #FFFFFF;
-}
-
-/* RED ACCENTS */
-
-html[data-theme="christmas"] .tier-card h4 {
-  border-bottom-color: #A94452;
-}
-
-html[data-theme="christmas"] .tier-card li::before {
-  color: #A94452;
-}
-
-html[data-theme="christmas"] .lang-switcher {
-  border-color: #D9B9B0;
-}
-
-html[data-theme="christmas"] .lang-switcher button.active {
-  background-color: var(--primary) !important;
-  color: white !important;
-}
-
-html[data-theme="christmas"] nav a.active,
-html[data-theme="christmas"] nav a:hover {
-  background-color: #F3DEDC;
-}
-
-html[data-theme="christmas"] .filter-btn.active {
-  color: #A94452;
-  border-bottom-color: #A94452;
-}
-
-html[data-theme="christmas"] .icon {
-  background-color: #F3DEDC !important;
-  border-color: #D9B9B0;
-}
-
-html[data-theme="christmas"] footer .social-icon {
-  background-color: #F4E5DF;
-}
-
-html[data-theme="christmas"] #lightbox button {
-  color: #F4E5DF;
-}
-
-/* =========================
-   PAGE BACKGROUND
-========================= */
-
-body {
-  background-color: var(--background) !important;
-  color: var(--text);
-}
-
-/* HEADER */
-
-header {
-  background-color: var(--header) !important;
-  border-bottom-color: var(--primary) !important;
-}
-
-nav a {
-  color: var(--text);
-}
-
-nav a.active,
-nav a:hover {
-  background-color: var(--secondary);
-}
-
-
-/* =========================
-   SEASONAL LOGOS
-========================= */
-
-/* Default logo is visible */
-.logo-default {
-  display: block;
-}
-
-.logo-christmas {
-  display: none;
-}
-
-/* Christmas logo */
-html[data-theme="christmas"] .logo-default {
-  display: none;
-}
-
-html[data-theme="christmas"] .logo-christmas {
-  display: block;
-}
-
-
-/* BUTTONS */
-
-.book-btn,
-.cta-btn {
-  background-color: var(--primary) !important;
-  color: white !important;
-}
-
-/* LANGUAGE SWITCHER */
-
-.lang-switcher {
-  background-color: var(--secondary) !important;
-  border-color: var(--border);
-}
-
-.lang-switcher button.active {
-  background-color: var(--primary) !important;
-  color: white;
-}
-
-/* SERVICES */
-
-.services {
-  background-color: var(--secondary) !important;
-}
-
-.service-card,
-.service-info,
-.tier-card {
-  background-color: var(--card) !important;
-  border-color: var(--border) !important;
-}
-
-/* POLICY */
-
-.policy-page {
-  background-color: var(--background) !important;
-}
-
-.policy-card {
-  background-color: var(--card) !important;
-  border-color: var(--border) !important;
-}
-
-.icon {
-  background-color: var(--soft-accent) !important;
-  border-color: var(--border);
-}
-
-/* GALLERY */
-
-.filter-btn.active {
-  color: var(--primary);
-  border-bottom-color: var(--primary);
-}
-
-/* SERVICE DETAILS */
-
-.tier-card h4 {
-  border-bottom-color: var(--primary);
-}
-
-.tier-card li::before {
-  color: var(--primary);
-}
-
-/* FOOTER */
-
-footer {
-  background-color: var(--primary) !important;
-  color: white;
-}
-
-footer .social-icon {
-  background-color: var(--soft-accent);
-}
-
-
-/* LIGHTBOX */
-
-#lightbox button {
-  color: var(--soft-accent);
-}
-/* =========================
-   CHRISTMAS INTERACTIVE DETAILS
-========================= */
-
-/* Language switcher */
-html[data-theme="christmas"] .lang-switcher {
-  background-color: var(--card) !important;
-  border-color: var(--border);
-}
-
-html[data-theme="christmas"] .lang-switcher button:hover {
-  background-color: var(--christmas-red-light);
-}
-
-/* Icons */
-html[data-theme="christmas"] .icon {
-  background-color: var(--christmas-red-light) !important;
-  border-color: var(--border);
-}
-
-/* Social media */
-html[data-theme="christmas"] footer .social-icon {
-  background-color: var(--soft-accent);
-}
-
-/* Navigation hover */
-html[data-theme="christmas"] nav a:hover,
-html[data-theme="christmas"] nav a.active {
-  background-color: var(--christmas-red-light);
-}
-
-/* Gallery filters */
-html[data-theme="christmas"] .filter-btn.active {
-  color: var(--christmas-red);
-  border-bottom-color: var(--christmas-red);
-}
-
-/* Tier decorations */
-html[data-theme="christmas"] .tier-card h4 {
-  border-bottom-color: var(--christmas-red);
-}
-
-html[data-theme="christmas"] .tier-card li::before {
-  color: var(--christmas-red);
-}
-
-/* Buttons */
-html[data-theme="christmas"] .book-btn:hover,
-html[data-theme="christmas"] .cta-btn:hover {
-  background-color: #34573E !important;
-}
-
-/* Lightbox */
-html[data-theme="christmas"] #lightbox button {
-  color: var(--christmas-red-light);
+    garland.appendChild(img);
+  }
 }
