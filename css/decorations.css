@@ -64,7 +64,7 @@ html[data-theme="christmas"] .christmas-garland {
 @media (max-width: 600px) {
 
   html[data-theme="christmas"] .christmas-garland img {
-    width: 24%;
+    width: 35%;
   }
 
 }
