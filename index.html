@@ -348,23 +348,27 @@ let isInitialLoad = true;
 });
 
   window.addEventListener("scroll", () => {
-  if (isClickScrolling || isInitialLoad) return;
 
-  if (window.scrollY < 100) {
-    navLinks.forEach(link => link.classList.remove("active"));
-    document.querySelector('nav a[href="#home"]').classList.add("active");
-    return;
-  }
-
-  let current = "";
+  const detectionPoint = 190;
+  let current = "home";
 
   sections.forEach(section => {
     const rect = section.getBoundingClientRect();
 
-    if (rect.top <= 185 && rect.bottom >= 180) {
+    if (rect.top <= detectionPoint) {
       current = section.id;
     }
   });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+
+});
 
   navLinks.forEach(link => link.classList.remove("active"));
 
