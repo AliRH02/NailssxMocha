@@ -26,8 +26,9 @@ html[data-theme="christmas"] .seasonal-decorations {
 ========================= */
 
 html[data-theme="christmas"] header {
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .christmas-garland {
