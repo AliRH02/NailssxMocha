@@ -4,80 +4,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title data-i18n="policyTitle">Policies | NailssxMocha</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/themes.css">
   <link rel="stylesheet" href="css/decorations.css">
+
   <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
 </head>
-<body>
-<header>
-  <div class="nav">
-   <div class="brand">
-  <img
-    src="images/Logo.png"
-    class="logo-default"
-    alt="Nailss x Mocha Logo"
-  >
-  <img
-    src="images/christmas-logo.png"
-    class="logo-christmas"
-    alt="Nailss x Mocha Christmas Logo"
-  >
 
+<body>
+
+<header>
+
+  <div class="nav">
+
+    <!-- LOGO -->
+    <div class="brand">
+
+      <img
+        src="images/Logo.png"
+        class="logo-default"
+        alt="Nailss x Mocha Logo"
+      >
+
+      <img
+        src="images/christmas-logo.png"
+        class="logo-christmas"
+        alt="Nailss x Mocha Christmas Logo"
+      >
+
+    </div>
+
+    <!-- NAVIGATION -->
     <nav>
       <a href="index.html#home" data-i18n="navHome"></a>
       <a href="index.html#services" data-i18n="navServices"></a>
       <a href="gallery.html" data-i18n="navGallery"></a>
       <a href="policy.html" class="active" data-i18n="navPolicy"></a>
-      <a href="https://nailssxmocha-booking.as.me/" class="book-btn" data-i18n="navBook"></a>
+
+      <a
+        href="https://nailssxmocha-booking.as.me/"
+        class="book-btn"
+        data-i18n="navBook">
+      </a>
     </nav>
+
+    <!-- LANGUAGE SWITCHER -->
     <div class="lang-switcher">
       <button id="lang-en">EN</button>
       <button id="lang-es">ES</button>
     </div>
+
   </div>
 
-    <div class="christmas-garland"></div>
+  <!-- CHRISTMAS HEADER GARLAND -->
+  <div class="christmas-garland"></div>
 
 </header>
 
+
 <main class="container">
-  <section class="policy-page">
+
+  <section class="policy-page policy">
+
+    <!-- POLICY TITLE -->
     <h1 class="policy-title" data-i18n="policyTitle"></h1>
+
+    <!-- CHRISTMAS TITLE DECORATION -->
+    <div class="christmas-divider">
+      <img
+        src="images/decorations/christmas/small-garland.png"
+        alt=""
+      >
+    </div>
+
+    <!-- POLICY CARDS -->
     <div class="policy-grid">
+
+      <!-- APPOINTMENTS -->
       <div class="policy-card">
 
         <div class="icon">
-          <img src="images/icons_appointment.png" alt="Appointments icon">
+          <img
+            src="images/icons_appointment.png"
+            alt="Appointments icon"
+          >
         </div>
+
         <h2 data-i18n="policySubtitle1"></h2>
+
         <p data-i18n="policy1Description1"></p>
         <p data-i18n="policy1Description2"></p>
         <p data-i18n="policy1Description3"></p>
         <p data-i18n="policy1Description4"></p>
         <p data-i18n="policy1Description5"></p>
         <p data-i18n="policy1Description6"></p>
+
       </div>
+
+
+      <!-- PAYMENTS -->
       <div class="policy-card">
 
         <div class="icon">
-          <img src="images/icons_wallet.png" alt="Payments icon">
+          <img
+            src="images/icons_wallet.png"
+            alt="Payments icon"
+          >
         </div>
+
         <h2 data-i18n="policySubtitle2"></h2>
-      <p data-i18n="policy2Description1"></p>
+
+        <p data-i18n="policy2Description1"></p>
         <p data-i18n="policy2Description2"></p>
         <p data-i18n="policy2Description3"></p>
         <p data-i18n="policy2Description4"></p>
         <p data-i18n="policy2Description5"></p>
+
       </div>
+
     </div>
+
   </section>
+
 </main>
 
+
+<!-- FOOTER -->
 <footer>
 
-  <div class="seasonal-decorations christmas-gifts" aria-hidden="true">
+  <div
+    class="seasonal-decorations christmas-gifts"
+    aria-hidden="true">
 
     <img
       src="images/decorations/christmas/gift-stack-1.png"
@@ -91,10 +151,11 @@
     Follow us on Instagram
   </p>
 
-  <a href="https://www.instagram.com/nailssxmocha/"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="social-btn">
+  <a
+    href="https://www.instagram.com/nailssxmocha/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-btn">
 
     <div class="social-icon">
       <img src="images/instagram.png" alt="Instagram icon">
@@ -103,7 +164,10 @@
   </a>
 
 </footer>
+
+
 <script src="js/language.js"></script>
 <script src="js/theme_manager.js"></script>
+
 </body>
 </html>
