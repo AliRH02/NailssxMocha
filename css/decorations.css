@@ -1,4 +1,4 @@
-
+f
 
 /* =========================
    SEASONAL DECORATIONS
@@ -346,14 +346,13 @@ footer {
 }
 
 .christmas-gifts {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  position: absolute;
+  top: -95px;
+  right: 5%;
   display: flex;
   align-items: flex-end;
   gap: 5px;
-  z-index: 100;
-  pointer-events: none;
+  z-index: 4;
 }
 
 .christmas-gift {
