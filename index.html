@@ -320,19 +320,12 @@ let isInitialLoad = true;
   }, 500);
 });
 
-  let isClickScrolling = false;
+ 
+let isClickScrolling = false;
 
-  navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
     const href = link.getAttribute("href");
-
-    if (
-      href === "#home" &&
-      (window.location.hash === "" || window.location.hash === "#home")
-    ) {
-      e.preventDefault();
-      return;
-    }
 
     if (href.startsWith("#")) {
       isClickScrolling = true;
@@ -346,6 +339,7 @@ let isInitialLoad = true;
     }
   });
 });
+
   
 window.addEventListener("scroll", () => {
   if (isClickScrolling || isInitialLoad) return;
