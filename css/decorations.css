@@ -69,15 +69,6 @@ html[data-theme="christmas"] .christmas-garland {
 
 }
 
-/* =========================
-   CHRISTMAS TIER DECORATIONS
-========================= */
-
-html[data-theme="christmas"] .tier-card li::before {
-  content: "🎄";
-  color: inherit;
-}
-
 /* CHRISTMAS SECTION DIVIDER */
 
 .christmas-divider {
