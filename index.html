@@ -346,7 +346,7 @@ let isInitialLoad = true;
     }
   });
 });
-
+  
 window.addEventListener("scroll", () => {
   if (isClickScrolling || isInitialLoad) return;
 
@@ -363,8 +363,6 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // The gallery preview is not a navigation destination.
-  // Keep Home active when that section is reached.
   if (current === "gallery") {
     current = "home";
   }
@@ -378,18 +376,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-  navLinks.forEach(link => link.classList.remove("active"));
-
-  if (current === "home" || current === "gallery") {
-    document.querySelector('nav a[href="#home"]').classList.add("active");
-  } 
-  else if (current === "services") {
-    document.querySelector('nav a[href="#services"]').classList.add("active");
-  }
-else if (current === "policy") {
-    document.querySelector('nav a[href="#policy"]').classList.add("active");
-  }
-});
 </script>
 <script src="js/language.js"></script>
 <script src="js/theme_manager.js"></script>
