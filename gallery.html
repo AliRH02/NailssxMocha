@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="galleryWebTitle"></title>
+
+  <title data-i18n="policyTitle">Policies | NailssxMocha</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/themes.css">
   <link rel="stylesheet" href="css/decorations.css">
-  <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&display=swap" rel="stylesheet">
-</head>
 
+  <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Pinyon+Script&family=Playfair+Display:wght@600&family=Lora&display=swap" rel="stylesheet">
+</head>
 
 <body>
 
@@ -18,343 +20,124 @@
 
   <div class="nav">
 
+    <!-- LOGO -->
     <div class="brand">
-  <img
-    src="images/Logo.png"
-    class="logo-default"
-    alt="Nailss x Mocha Logo"
-  >
-  <img
-    src="images/christmas-logo.png"
-    class="logo-christmas"
-    alt="Nailss x Mocha Christmas Logo"
-  >
 
-</div>
+      <img
+        src="images/Logo.png"
+        class="logo-default"
+        alt="Nailss x Mocha Logo"
+      >
 
+      <img
+        src="images/christmas-logo.png"
+        class="logo-christmas"
+        alt="Nailss x Mocha Christmas Logo"
+      >
+
+    </div>
+
+    <!-- NAVIGATION -->
     <nav>
-
       <a href="index.html#home" data-i18n="navHome"></a>
       <a href="index.html#services" data-i18n="navServices"></a>
-      <a href="gallery.html" class="active" data-i18n="navGallery"></a>
-      <a href="index.html#policy" data-i18n="navPolicy"></a>
-      <a href="https://nailssxmocha-booking.as.me/" class="book-btn" data-i18n="navBook"></a>
+      <a href="gallery.html" data-i18n="navGallery"></a>
+      <a href="policy.html" class="active" data-i18n="navPolicy"></a>
+
+      <a
+        href="https://nailssxmocha-booking.as.me/"
+        class="book-btn"
+        data-i18n="navBook">
+      </a>
     </nav>
+
+    <!-- LANGUAGE SWITCHER -->
     <div class="lang-switcher">
       <button id="lang-en">EN</button>
       <button id="lang-es">ES</button>
     </div>
-      <div class="christmas-garland"></div>
-
 
   </div>
+
+  <!-- CHRISTMAS HEADER GARLAND -->
+  <div class="christmas-garland"></div>
+
 </header>
+
+
 <main class="container">
-<section id="gallery">
 
-<h2 class="gallery-title" data-i18n="galleryPageTitle"></h2>
+  <section class="policy-page policy">
 
-<div class="gallery-filters">
-  <button class="filter-btn active" data-filter="all">All Designs</button>
-  <button class="filter-btn" data-filter="tier1">Tier One</button>
-  <button class="filter-btn" data-filter="tier2">Tier Two</button>
-  <button class="filter-btn" data-filter="tier3">Tier Three</button>
-</div>
+    <!-- POLICY TITLE -->
+    <h1 class="policy-title" data-i18n="policyTitle"></h1>
 
-<div class="gallery">
-  <img src="images/nail1.jpeg" data-tier="tier3" alt="Nail design 1" onclick="openImage(this)">
-  <img src="images/nail2.jpeg" data-tier="tier3" alt="Nail design 2" onclick="openImage(this)">
-  <img src="images/nail3.jpeg" data-tier="tier2" alt="Nail design 3" onclick="openImage(this)">
-  <img src="images/nail4.jpeg" data-tier="tier3" alt="Nail design 4" onclick="openImage(this)">
-  <img src="images/nail5.jpeg" data-tier="tier2" alt="Nail design 5" onclick="openImage(this)">
-  <img src="images/nail6.jpeg" data-tier="tier1" alt="Nail design 6" onclick="openImage(this)">
-  <img src="images/nail7.jpeg" data-tier="tier1" alt="Nail design 7" onclick="openImage(this)">
-  <img src="images/nail8.jpeg" data-tier="tier2" alt="Nail design 8" onclick="openImage(this)">
-  <img src="images/structuredmanicure.jpeg" data-tier="tier2" alt="Structured Manicure" onclick="openImage(this)">
-</div>
-  
+    <!-- CHRISTMAS TITLE DECORATION -->
+    <div class="christmas-divider">
+      <img
+        src="images/decorations/christmas/small-garland.png"
+        alt=""
+      >
+    </div>
+
+    <!-- POLICY CARDS -->
+    <div class="policy-grid">
+
+      <!-- APPOINTMENTS -->
+      <div class="policy-card">
+
+        <div class="icon">
+          <img
+            src="images/icons_appointment.png"
+            alt="Appointments icon"
+          >
+        </div>
+
+        <h2 data-i18n="policySubtitle1"></h2>
+
+        <p data-i18n="policy1Description1"></p>
+        <p data-i18n="policy1Description2"></p>
+        <p data-i18n="policy1Description3"></p>
+        <p data-i18n="policy1Description4"></p>
+        <p data-i18n="policy1Description5"></p>
+        <p data-i18n="policy1Description6"></p>
+
+      </div>
 
 
-<div id="lightbox">
-<button class="prev" onclick="showPrev(event)">❮</button>
-<img id="lightbox-img">
-<button class="next" onclick="showNext(event)">❯</button>
-</div>
-</section>
+      <!-- PAYMENTS -->
+      <div class="policy-card">
+
+        <div class="icon">
+          <img
+            src="images/icons_wallet.png"
+            alt="Payments icon"
+          >
+        </div>
+
+        <h2 data-i18n="policySubtitle2"></h2>
+
+        <p data-i18n="policy2Description1"></p>
+        <p data-i18n="policy2Description2"></p>
+        <p data-i18n="policy2Description3"></p>
+        <p data-i18n="policy2Description4"></p>
+        <p data-i18n="policy2Description5"></p>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </main>
 
- <script>
 
-const allImages = Array.from(document.querySelectorAll(".gallery img"));
-let visibleImages = [...allImages];
-let currentIndex = 0;
-
-let startX = 0;
-let startY = 0;
-let endX = 0;
-let endY = 0;
-
-let scale = 1;
-let startDistance = 0;
-let isSwiping = false;
-
-
-// =========================
-// FILTER GALLERY
-// =========================
-
-const filterButtons = document.querySelectorAll(".filter-btn");
-
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-
-    const selectedTier = button.dataset.filter;
-
-    // Update active button
-    filterButtons.forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
-
-    // Close lightbox if it is open
-    closeImage();
-
-    // Update visible images
-    visibleImages = allImages.filter(img => {
-      return selectedTier === "all" || img.dataset.tier === selectedTier;
-    });
-
-    // Hide images outside selected tier
-    allImages.forEach(img => {
-      img.hidden = !visibleImages.includes(img);
-    });
-
-    currentIndex = 0;
-  });
-});
-
-
-// =========================
-// OPEN IMAGE
-// =========================
-
-function openImage(img) {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  currentIndex = visibleImages.indexOf(img);
-
-  if (currentIndex === -1) return;
-
-  lightboxImg.src = visibleImages[currentIndex].src;
-  lightbox.style.display = "flex";
-
-  setTimeout(() => {
-    lightbox.classList.add("active");
-    lightboxImg.classList.add("slide-in");
-  }, 10);
-
-  resetZoom();
-}
-
-
-// =========================
-// CHANGE IMAGE
-// =========================
-
-function changeImage(direction) {
-
-  if (visibleImages.length === 0) return;
-
-  const img = document.getElementById("lightbox-img");
-
-  img.classList.remove("slide-in");
-
-  if (direction === "next") {
-    img.classList.add("slide-out-left");
-  } else {
-    img.classList.add("slide-out-right");
-  }
-
-  setTimeout(() => {
-
-    if (direction === "next") {
-      currentIndex = (currentIndex + 1) % visibleImages.length;
-    } else {
-      currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
-    }
-
-    img.src = visibleImages[currentIndex].src;
-
-    img.classList.remove("slide-out-left", "slide-out-right");
-    img.classList.add("slide-in");
-
-    resetZoom();
-
-  }, 200);
-}
-
-
-function showNext(e) {
-  if (e) e.stopPropagation();
-  changeImage("next");
-}
-
-function showPrev(e) {
-  if (e) e.stopPropagation();
-  changeImage("prev");
-}
-
-
-// =========================
-// CLOSE IMAGE
-// =========================
-
-function closeImage() {
-
-  const lightbox = document.getElementById("lightbox");
-
-  if (!lightbox.classList.contains("active")) return;
-
-  lightbox.classList.remove("active");
-
-  setTimeout(() => {
-    lightbox.style.display = "none";
-  }, 300);
-}
-
-
-// =========================
-// LIGHTBOX CLICK
-// =========================
-
-const lightbox = document.getElementById("lightbox");
-
-lightbox.addEventListener("click", function(e) {
-
-  if (isSwiping) return;
-
-  const screenWidth = window.innerWidth;
-
-  if (e.target.id === "lightbox-img") {
-
-    if (e.clientX > screenWidth / 2) {
-      showNext();
-    } else {
-      showPrev();
-    }
-
-  } else if (!e.target.closest("button")) {
-    closeImage();
-  }
-});
-
-
-// =========================
-// TOUCH / SWIPE / ZOOM
-// =========================
-
-lightbox.addEventListener("touchstart", (e) => {
-
-  isSwiping = false;
-
-  startX = e.touches[0].clientX;
-  startY = e.touches[0].clientY;
-
-  if (e.touches.length === 2) {
-    startDistance = getDistance(e.touches);
-  }
-});
-
-
-lightbox.addEventListener("touchmove", (e) => {
-
-  const moveX = e.touches[0].clientX;
-  const moveY = e.touches[0].clientY;
-
-  if (Math.abs(moveX - startX) > 10 || Math.abs(moveY - startY) > 10) {
-    isSwiping = true;
-  }
-
-  if (e.touches.length === 1) {
-    e.preventDefault();
-  }
-
-  if (e.touches.length === 2) {
-
-    const newDistance = getDistance(e.touches);
-    scale = newDistance / startDistance;
-
-    scale = Math.min(Math.max(scale, 1), 3);
-
-    document.getElementById("lightbox-img").style.transform = `scale(${scale})`;
-  }
-
-}, { passive: false });
-
-
-lightbox.addEventListener("touchend", (e) => {
-
-  endX = e.changedTouches[0].clientX;
-  endY = e.changedTouches[0].clientY;
-
-  const diffX = startX - endX;
-  const diffY = startY - endY;
-
-  if (scale > 1) {
-    resetZoom();
-    return;
-  }
-
-  if (Math.abs(diffX) > 50 && Math.abs(diffY) < 50) {
-
-    if (diffX > 0) {
-      showNext();
-    } else {
-      showPrev();
-    }
-
-  }
-});
-
-
-function getDistance(touches) {
-
-  return Math.hypot(
-    touches[0].clientX - touches[1].clientX,
-    touches[0].clientY - touches[1].clientY
-  );
-
-}
-
-
-function resetZoom() {
-
-  scale = 1;
-
-  const img = document.getElementById("lightbox-img");
-  img.style.transform = "scale(1)";
-
-}
-
-
-// =========================
-// KEYBOARD NAVIGATION
-// =========================
-
-document.addEventListener("keydown", (e) => {
-
-  if (!lightbox.classList.contains("active")) return;
-
-  if (e.key === "ArrowRight") showNext();
-  if (e.key === "ArrowLeft") showPrev();
-  if (e.key === "Escape") closeImage();
-
-});
-
-</script>
-
+<!-- FOOTER -->
 <footer>
 
-  <div class="seasonal-decorations christmas-gifts" aria-hidden="true">
+  <div
+    class="seasonal-decorations christmas-gifts"
+    aria-hidden="true">
 
     <img
       src="images/decorations/christmas/gift-stack-1.png"
@@ -368,10 +151,11 @@ document.addEventListener("keydown", (e) => {
     Follow us on Instagram
   </p>
 
-  <a href="https://www.instagram.com/nailssxmocha/"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="social-btn">
+  <a
+    href="https://www.instagram.com/nailssxmocha/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-btn">
 
     <div class="social-icon">
       <img src="images/instagram.png" alt="Instagram icon">
@@ -380,7 +164,10 @@ document.addEventListener("keydown", (e) => {
   </a>
 
 </footer>
-  <script src="js/language.js"></script>
+
+
+<script src="js/language.js"></script>
 <script src="js/theme_manager.js"></script>
+
 </body>
 </html>
