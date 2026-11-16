@@ -347,9 +347,12 @@ let isInitialLoad = true;
   });
 });
 
-  window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
+  if (isClickScrolling || isInitialLoad) return;
 
-  const detectionPoint = 190;
+  const header = document.querySelector("header");
+  const detectionPoint = header.getBoundingClientRect().height + 20;
+
   let current = "home";
 
   sections.forEach(section => {
@@ -360,6 +363,12 @@ let isInitialLoad = true;
     }
   });
 
+  // The gallery preview is not a navigation destination.
+  // Keep Home active when that section is reached.
+  if (current === "gallery") {
+    current = "home";
+  }
+
   navLinks.forEach(link => {
     link.classList.remove("active");
 
@@ -367,7 +376,6 @@ let isInitialLoad = true;
       link.classList.add("active");
     }
   });
-
 });
 
   navLinks.forEach(link => link.classList.remove("active"));
